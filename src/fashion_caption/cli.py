@@ -28,6 +28,7 @@ def parse_args(argv=None) -> argparse.Namespace:
         default="Salesforce/blip2-opt-2.7b",
         help="BLIP-2 checkpoint (e.g., Salesforce/blip2-opt-2.7b or blip2-flan-t5-xl if you have access).",
     )
+    parser.add_argument("--blip2-adapter-path", default=None, help="Optional path to a LoRA adapter directory.")
     parser.add_argument("--blip2-max-new-tokens", type=int, default=60)
     parser.add_argument("--blip2-torch-dtype", default=None, help="Optional torch dtype for BLIP-2 (e.g., float16).")
     return parser.parse_args(argv)
@@ -79,6 +80,7 @@ def run(args: argparse.Namespace) -> None:
             model_id=args.blip2_model_id,
             max_new_tokens=args.blip2_max_new_tokens,
             torch_dtype=args.blip2_torch_dtype,
+            adapter_path=args.blip2_adapter_path,
         )
         blip2_results["description_raw"] = blip2_results["description"]
         blip2_results["description"] = blip2_results.apply(
@@ -118,7 +120,12 @@ def run(args: argparse.Namespace) -> None:
 
     if not args.skip_blip2:
         df_eval_blip2 = blip2.caption(
-            df_eval, device=device, model_id=args.blip2_model_id, max_new_tokens=60
+            df_eval,
+            device=device,
+            model_id=args.blip2_model_id,
+            max_new_tokens=args.blip2_max_new_tokens,
+            torch_dtype=args.blip2_torch_dtype,
+            adapter_path=args.blip2_adapter_path,
         )
         df_eval_blip2 = df_eval[["id", "productDisplayName"]].merge(df_eval_blip2, on="id", how="inner")
         df_eval_blip2["reference"] = df_eval_blip2["productDisplayName"]

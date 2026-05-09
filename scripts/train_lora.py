@@ -1,140 +1,298 @@
 """
-Minimal LoRA fine-tuning script for BLIP-2 on your dataset.
+LoRA fine-tuning for BLIP-2 on the local fashion dataset.
 
-Assumptions:
-- Dataset: data/styles.csv with columns id, productDisplayName (reference text), image_path (filled via preprocessing).
-- Uses LoRA on the text decoder of blip2-flan-t5-base to keep memory small.
+This script mirrors the safer notebook setup:
+- defaults to `Salesforce/blip2-opt-2.7b`
+- uses small, cleaned catalog-style targets
+- enables gradient checkpointing and gradient accumulation
+- avoids the common torchao/peft incompatibility
 
-Run (example on GPU):
+Example:
     HF_HOME=.cache/huggingface \
     accelerate launch scripts/train_lora.py \
         --data-root data \
-        --epochs 1 \
-        --batch-size 2 \
-        --lr 5e-5 \
-        --out-dir lora-blip2
-
-Notes:
-- On Apple Silicon / CPU training will be slow; prefer a GPU runtime (Colab/Gradient).
-- bitsandbytes is optional and may be unavailable on macOS; script falls back to full precision.
+        --out-dir lora-blip2-ecommerce
 """
+
+from __future__ import annotations
+
 import argparse
-import os
+import gc
+import importlib.metadata as md
+import re
+import subprocess
+import sys
 from pathlib import Path
 from typing import Dict
 
 import pandas as pd
 from PIL import Image
 import torch
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import DataLoader, Dataset
 from tqdm.auto import tqdm
-from transformers import AutoProcessor, AutoModelForVision2Seq, get_cosine_schedule_with_warmup
+from transformers import (
+    Blip2ForConditionalGeneration,
+    Blip2Processor,
+    get_cosine_schedule_with_warmup,
+)
 
 try:
-    from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
-except ImportError:
-    raise SystemExit("Install peft to run LoRA fine-tuning: pip install peft")
-
-try:
-    import bitsandbytes as bnb
-    BNB_AVAILABLE = True
-except ImportError:
-    BNB_AVAILABLE = False
+    from peft import LoraConfig, TaskType, get_peft_model
+except ImportError as exc:
+    raise SystemExit("Install peft and accelerate to run LoRA fine-tuning.") from exc
 
 
-class CaptionDataset(Dataset):
-    def __init__(self, df: pd.DataFrame, processor):
+def get_version(package_name: str) -> str | None:
+    try:
+        return md.version(package_name)
+    except md.PackageNotFoundError:
+        return None
+
+
+def version_tuple(version: str) -> tuple[int, ...]:
+    return tuple(int(part) for part in version.split(".") if part.isdigit())
+
+
+def remove_incompatible_torchao() -> None:
+    torchao_version = get_version("torchao")
+    if torchao_version is None:
+        return
+    if version_tuple(torchao_version) >= (0, 16, 0):
+        return
+    print(f"Removing incompatible torchao=={torchao_version}")
+    subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y", "torchao"], check=False)
+
+
+def normalize_spaces(text: str) -> str:
+    return re.sub(r"\s+", " ", str(text)).strip()
+
+
+def clean_article_type(value: str) -> str:
+    text = normalize_spaces(value)
+    if not text:
+        return "item"
+    return text.replace("Tshirts", "t-shirt").replace("Shirts", "shirt").replace("Tops", "top")
+
+
+def template_target_description(row: pd.Series) -> str:
+    article = clean_article_type(row.get("articleType", "item"))
+    color = str(row.get("baseColour", "")).strip().lower()
+    gender = str(row.get("gender", "")).strip().lower()
+    gender_prefix = ""
+    if gender in {"men", "women", "boys", "girls", "unisex"}:
+        gender_prefix = f"{gender}'s " if not gender.endswith("s") else f"{gender} "
+    return normalize_spaces(
+        f"A {color} {gender_prefix}{article} with visible garment details and a clean catalog style."
+    )
+
+
+def sanitize_target_description(text: str, row: pd.Series) -> str:
+    cleaned = normalize_spaces(text)
+    cleaned = re.sub(
+        r"\b(model|posing|wearing|standing|showing|pictured|photo|image|background)\b",
+        "",
+        cleaned,
+        flags=re.IGNORECASE,
+    )
+    cleaned = normalize_spaces(cleaned)
+    article = clean_article_type(row.get("articleType", "item"))
+    color = str(row.get("baseColour", "")).strip().lower()
+    if article and article.lower() not in cleaned.lower():
+        cleaned = f"{article.capitalize()} with visible garment details."
+    if color and color.lower() not in cleaned.lower():
+        cleaned = f"{color.capitalize()} {cleaned[0].lower() + cleaned[1:] if cleaned else article}."
+    return normalize_spaces(cleaned)
+
+
+def make_training_prompt(row: pd.Series) -> str:
+    article = clean_article_type(row.get("articleType", "clothing item"))
+    color = str(row.get("baseColour", "")).strip().lower()
+    return (
+        "Write a short e-commerce garment description in one sentence. "
+        f"The item is a {color} {article}. "
+        "Mention only visible clothing details. Do not mention people, poses, or background."
+    )
+
+
+def resolve_dtype(device: torch.device, model_id: str) -> torch.dtype:
+    if device.type != "cuda":
+        return torch.float32
+    if "flan-t5" in model_id.lower() and torch.cuda.is_bf16_supported():
+        return torch.bfloat16
+    return torch.float16
+
+
+def resolve_task_type(model_id: str) -> TaskType:
+    if "flan-t5" in model_id.lower():
+        return TaskType.SEQ_2_SEQ_LM
+    return TaskType.CAUSAL_LM
+
+
+def resolve_target_modules(model_id: str) -> list[str]:
+    if "opt" in model_id.lower():
+        return ["q_proj", "v_proj"]
+    return ["q", "v"]
+
+
+def build_train_df(data_root: Path, max_samples: int, seed: int) -> pd.DataFrame:
+    styles_path = data_root / "styles.csv"
+    images_root = data_root / "images"
+    df = pd.read_csv(styles_path, on_bad_lines="skip")
+    df["id"] = df["id"].astype(str)
+    df["image_path"] = df["id"].apply(lambda x: images_root / f"{x}.jpg")
+    df = df[df["image_path"].apply(lambda p: p.exists())].copy()
+
+    if "subCategory" in df.columns:
+        df = df[df["subCategory"] == "Topwear"].copy()
+
+    df["target_description"] = df.apply(template_target_description, axis=1)
+    df["target_description"] = df.apply(
+        lambda row: sanitize_target_description(row["target_description"], row),
+        axis=1,
+    )
+    df = df[df["target_description"].astype(str).str.len().gt(15)].copy()
+    return df.sample(frac=1.0, random_state=seed).head(max_samples).reset_index(drop=True)
+
+
+class FashionCaptionLoRADataset(Dataset):
+    def __init__(
+        self,
+        df: pd.DataFrame,
+        processor: Blip2Processor,
+        max_prompt_length: int,
+        max_label_length: int,
+    ):
         self.df = df.reset_index(drop=True)
         self.processor = processor
+        self.max_prompt_length = max_prompt_length
+        self.max_label_length = max_label_length
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self.df)
 
     def __getitem__(self, idx: int) -> Dict[str, torch.Tensor]:
         row = self.df.iloc[idx]
-        image = Image.open(row["image_path"]).convert("RGB")
+        image = Image.open(str(row["image_path"])).convert("RGB")
+        prompt = make_training_prompt(row)
+        target = normalize_spaces(str(row["target_description"]))
+
         inputs = self.processor(
             images=image,
-            text=str(row["reference"]),
+            text=prompt,
             return_tensors="pt",
             padding="max_length",
             truncation=True,
-            max_length=64,
+            max_length=self.max_prompt_length,
         )
-        # flatten batch dimension
-        return {k: v.squeeze(0) for k, v in inputs.items()}
+        labels = self.processor.tokenizer(
+            target,
+            return_tensors="pt",
+            padding="max_length",
+            truncation=True,
+            max_length=self.max_label_length,
+        ).input_ids
+        labels[labels == self.processor.tokenizer.pad_token_id] = -100
+        inputs["labels"] = labels
+        return {key: value.squeeze(0) for key, value in inputs.items()}
 
 
 def train(args: argparse.Namespace) -> None:
+    remove_incompatible_torchao()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
 
-    processor = AutoProcessor.from_pretrained(args.model_id)
-    load_kwargs = {}
-    if BNB_AVAILABLE and device.type == "cuda":
-        load_kwargs = {"load_in_8bit": True, "device_map": "auto"}
-    model = AutoModelForVision2Seq.from_pretrained(args.model_id, **load_kwargs)
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
 
-    if BNB_AVAILABLE and device.type == "cuda":
-        model = prepare_model_for_kbit_training(model)
+    train_df = build_train_df(Path(args.data_root), args.max_samples, args.seed)
+    print(f"Training rows: {len(train_df)}")
+
+    dtype = resolve_dtype(device, args.model_id)
+    processor = Blip2Processor.from_pretrained(args.model_id)
+    model = Blip2ForConditionalGeneration.from_pretrained(args.model_id, torch_dtype=dtype)
+
+    if hasattr(model, "gradient_checkpointing_enable"):
+        model.gradient_checkpointing_enable()
+    if hasattr(model, "enable_input_require_grads"):
+        model.enable_input_require_grads()
 
     lora_cfg = LoraConfig(
-        r=8,
-        lora_alpha=16,
-        target_modules=["q", "v", "k"],  # broad but safe for T5 blocks
-        lora_dropout=0.05,
+        r=args.lora_r,
+        lora_alpha=args.lora_alpha,
+        target_modules=resolve_target_modules(args.model_id),
+        lora_dropout=args.lora_dropout,
         bias="none",
-        task_type="SEQ_2_SEQ_LM",
+        task_type=resolve_task_type(args.model_id),
     )
     model = get_peft_model(model, lora_cfg)
+    model.to(device)
     model.train()
+    model.print_trainable_parameters()
 
-    # Data
-    styles_path = Path(args.data_root) / "styles.csv"
-    df = pd.read_csv(styles_path, on_bad_lines="skip")
-    df["id"] = df["id"].astype(str)
-    df["image_path"] = df["id"].apply(lambda x: Path(args.data_root) / "images" / f"{x}.jpg")
-    df = df[df["image_path"].apply(lambda p: p.exists())]
-    df["reference"] = df["productDisplayName"].fillna("")
-    df = df.sample(frac=1.0, random_state=42).head(args.max_samples)
-
-    dataset = CaptionDataset(df, processor)
-    loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=True, num_workers=2, pin_memory=device.type == "cuda")
+    dataset = FashionCaptionLoRADataset(
+        train_df,
+        processor,
+        max_prompt_length=args.max_prompt_length,
+        max_label_length=args.max_label_length,
+    )
+    loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=True, num_workers=0)
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr)
-    total_steps = len(loader) * args.epochs
-    scheduler = get_cosine_schedule_with_warmup(optimizer, num_warmup_steps=max(10, total_steps // 10), num_training_steps=total_steps)
+    total_steps = max(1, (len(loader) * args.epochs) // max(1, args.grad_accum_steps))
+    scheduler = get_cosine_schedule_with_warmup(
+        optimizer,
+        num_warmup_steps=max(1, total_steps // 10),
+        num_training_steps=total_steps,
+    )
 
-    model.to(device)
-
+    optimizer.zero_grad(set_to_none=True)
     for epoch in range(args.epochs):
-        pbar = tqdm(loader, desc=f"epoch {epoch+1}/{args.epochs}")
-        for batch in pbar:
-            batch = {k: v.to(device) for k, v in batch.items()}
+        progress = tqdm(loader, desc=f"LoRA epoch {epoch + 1}/{args.epochs}")
+        for step, batch in enumerate(progress, start=1):
+            batch = {
+                key: (
+                    value.to(device=device, dtype=dtype)
+                    if torch.is_floating_point(value)
+                    else value.to(device)
+                )
+                for key, value in batch.items()
+            }
             outputs = model(**batch)
-            loss = outputs.loss
+            loss = outputs.loss / max(1, args.grad_accum_steps)
             loss.backward()
-            optimizer.step()
-            scheduler.step()
-            optimizer.zero_grad()
-            pbar.set_postfix({"loss": loss.item()})
+
+            if step % args.grad_accum_steps == 0 or step == len(loader):
+                torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                optimizer.step()
+                scheduler.step()
+                optimizer.zero_grad(set_to_none=True)
+
+            progress.set_postfix({"loss": float(loss.detach().cpu()) * max(1, args.grad_accum_steps)})
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     model.save_pretrained(out_dir)
     processor.save_pretrained(out_dir)
-    print(f"Saved LoRA-adapted model to {out_dir}")
+    print(f"Saved LoRA adapter to {out_dir.resolve()}")
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="LoRA fine-tuning for BLIP-2.")
+    parser = argparse.ArgumentParser(description="LoRA fine-tuning for BLIP-2 on the fashion dataset.")
     parser.add_argument("--data-root", default="data", help="Folder with styles.csv and images/")
-    parser.add_argument("--model-id", default="Salesforce/blip2-flan-t5-base", help="Base BLIP-2 checkpoint.")
-    parser.add_argument("--out-dir", default="lora-blip2", help="Where to save adapters.")
+    parser.add_argument("--model-id", default="Salesforce/blip2-opt-2.7b", help="Base BLIP-2 checkpoint.")
+    parser.add_argument("--out-dir", default="lora-blip2-ecommerce", help="Where to save LoRA adapters.")
     parser.add_argument("--epochs", type=int, default=1)
-    parser.add_argument("--batch-size", type=int, default=2)
-    parser.add_argument("--lr", type=float, default=5e-5)
-    parser.add_argument("--max-samples", type=int, default=2000, help="Limit samples for quick runs.")
+    parser.add_argument("--batch-size", type=int, default=1)
+    parser.add_argument("--grad-accum-steps", type=int, default=4)
+    parser.add_argument("--lr", type=float, default=1e-5)
+    parser.add_argument("--max-samples", type=int, default=96, help="Limit samples for quick runs.")
+    parser.add_argument("--max-prompt-length", type=int, default=48)
+    parser.add_argument("--max-label-length", type=int, default=48)
+    parser.add_argument("--lora-r", type=int, default=8)
+    parser.add_argument("--lora-alpha", type=int, default=16)
+    parser.add_argument("--lora-dropout", type=float, default=0.05)
+    parser.add_argument("--seed", type=int, default=42)
     return parser.parse_args()
 
 
