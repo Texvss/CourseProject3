@@ -190,4 +190,7 @@ with gr.Blocks(title="Fashion Captioning Demo") as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(
+        server_name=os.environ.get("GRADIO_SERVER_NAME", "127.0.0.1"),
+        server_port=int(os.environ.get("GRADIO_SERVER_PORT", "7860")),
+    )
