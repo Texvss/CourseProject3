@@ -6,9 +6,11 @@ from nltk.translate.bleu_score import sentence_bleu
 
 def ensure_nltk():
     nltk.download("punkt", quiet=True)
+    nltk.download("punkt_tab", quiet=True)
 
 
 def bleu1(df: pd.DataFrame, ref_col: str = "reference", gen_col: str = "generated") -> float:
+    ensure_nltk()
     scores = []
     for _, r in df.iterrows():
         ref_tok = nltk.word_tokenize(str(r[ref_col]).lower())

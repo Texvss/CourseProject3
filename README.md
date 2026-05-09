@@ -12,10 +12,17 @@ Refactored version of CourseProject-2.ipynb with a modular Python layout.
 - `src/fashion_caption/visualization/` - comparison sheet PNG export.
 - `data/` - expected to contain `styles.csv` and `images/`.
 - `scripts/train_lora.py` - minimal LoRA trainer for BLIP-2.
+- `scripts/serve_blip2_api.py` - remote BLIP-2 / BLIP-2 LoRA HTTP server for RunPod or another GPU box.
+- `app.py` - Gradio UI with local BLIP / ViT-GPT2 and remote BLIP-2 / BLIP-2 LoRA modes.
 
 ## Install deps
 ```
 pip install pandas numpy pillow torch torchvision transformers matplotlib tqdm nltk
+```
+
+Or install everything from the project file:
+```
+pip install -r requirements.txt
 ```
 
 ## Run
@@ -34,3 +41,22 @@ Flags:
 - `--skip-blip2` and `--blip2-model-id` - control BLIP-2.
 - `--sanity-n` / `--eval-n` - split sizes.
 - `--device` - cpu, cuda, mps or auto.
+
+## Web UI
+Run the local UI:
+```
+python app.py
+```
+
+To keep large models off your laptop, run the BLIP-2 backend on RunPod:
+```
+PYTHONPATH=src python scripts/serve_blip2_api.py --device cuda --host 0.0.0.0 --port 8000
+```
+
+Then point `app.py` at that backend:
+```
+export FASHION_CAPTION_REMOTE_URL=http://<runpod-host>:8000/caption
+export FASHION_CAPTION_REMOTE_MODEL_ID=Salesforce/blip2-opt-2.7b
+export FASHION_CAPTION_REMOTE_ADAPTER_PATH=/workspace/lora-blip2-ecommerce
+python app.py
+```

@@ -5,6 +5,7 @@ from typing import List, Optional
 import pandas as pd
 import torch
 from tqdm import tqdm
+from PIL import Image
 from transformers import AutoProcessor, Blip2ForConditionalGeneration
 
 from fashion_caption.models.common import load_image
@@ -48,6 +49,22 @@ def _clean_generated_description(text: str) -> str:
         flags=re.IGNORECASE,
     )
     return _normalize_spaces(cleaned)
+
+
+def generate_text(
+    image: Image.Image,
+    processor,
+    model,
+    model_id: str,
+    prompt: Optional[str] = None,
+    max_new_tokens: int = 60,
+) -> str:
+    prompt_text = prompt or config.PROMPT
+    inputs = processor(images=image.convert("RGB"), text=prompt_text, return_tensors="pt").to(model.device)
+    with torch.no_grad():
+        output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
+    text = _decode_generated_text(processor, inputs, output_ids, model_id=model_id)
+    return _clean_generated_description(text)
 
 
 def load_model(
@@ -96,14 +113,16 @@ def caption(
         adapter_path=adapter_path,
     )
     rows: List[dict] = []
-    prompt_text = prompt or config.PROMPT
     for _, row in tqdm(df.iterrows(), total=len(df), desc="BLIP-2"):
         image = load_image(row["image_path"])
-        inputs = processor(images=image, text=prompt_text, return_tensors="pt").to(device)
-        with torch.no_grad():
-            out_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
-        text = _decode_generated_text(processor, inputs, out_ids, model_id=model_id)
-        text = _clean_generated_description(text)
+        text = generate_text(
+            image=image,
+            processor=processor,
+            model=model,
+            model_id=model_id,
+            prompt=prompt,
+            max_new_tokens=max_new_tokens,
+        )
         rows.append(
             {
                 "id": row["id"],
