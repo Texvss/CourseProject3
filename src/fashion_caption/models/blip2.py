@@ -1,4 +1,3 @@
-import re
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -24,59 +23,6 @@ def _resolve_torch_dtype(torch_dtype: Optional[str], device: torch.device, model
     return None
 
 
-def _normalize_spaces(text: str) -> str:
-    return re.sub(r"\s+", " ", str(text)).strip()
-
-
-def _decode_generated_text(processor, inputs, output_ids: torch.Tensor, model_id: str) -> str:
-    # BLIP-2 OPT returns prompt + generated continuation. We only want the generated suffix.
-    if "opt" in model_id.lower() and "input_ids" in inputs:
-        prompt_len = inputs["input_ids"].shape[1]
-        generated_ids = output_ids[:, prompt_len:]
-        if generated_ids.shape[1] > 0:
-            return processor.decode(generated_ids[0], skip_special_tokens=True).strip()
-    return processor.decode(output_ids[0], skip_special_tokens=True).strip()
-
-
-def _strip_prompt_echo(text: str, prompt: str) -> str:
-    normalized_text = _normalize_spaces(text)
-    normalized_prompt = _normalize_spaces(prompt)
-    if normalized_prompt and normalized_text.lower().startswith(normalized_prompt.lower()):
-        return normalized_text[len(normalized_prompt) :].strip(" :.-")
-    return normalized_text
-
-
-def _decode_text_candidates(processor, inputs, output_ids: torch.Tensor, model_id: str, prompt: str) -> List[str]:
-    candidates = []
-    generated_text = _decode_generated_text(processor, inputs, output_ids, model_id=model_id)
-    if generated_text:
-        candidates.append(_strip_prompt_echo(generated_text, prompt))
-
-    full_text = processor.decode(output_ids[0], skip_special_tokens=True).strip()
-    if full_text:
-        candidates.append(_strip_prompt_echo(full_text, prompt))
-
-    deduped = []
-    for candidate in candidates:
-        candidate = _normalize_spaces(candidate)
-        if candidate and candidate not in deduped:
-            deduped.append(candidate)
-    return deduped
-
-
-def _clean_generated_description(text: str) -> str:
-    cleaned = _normalize_spaces(text)
-    cleaned = cleaned.replace("Product description:", "").strip()
-    cleaned = re.sub(r"^(write|describe)\b.*?:", "", cleaned, flags=re.IGNORECASE).strip()
-    cleaned = re.sub(
-        r"\b(model|posing|wearing|standing|showing|pictured|photo|image|background|photography)\b",
-        "",
-        cleaned,
-        flags=re.IGNORECASE,
-    )
-    return _normalize_spaces(cleaned)
-
-
 def generate_text_details(
     image: Image.Image,
     processor,
@@ -89,18 +35,7 @@ def generate_text_details(
     inputs = processor(images=image.convert("RGB"), text=prompt_text, return_tensors="pt").to(model.device)
     with torch.no_grad():
         output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
-    candidates = _decode_text_candidates(processor, inputs, output_ids, model_id=model_id, prompt=prompt_text)
-
-    raw_description = candidates[0] if candidates else ""
-    for candidate in candidates:
-        cleaned = _clean_generated_description(candidate)
-        if cleaned:
-            return {
-                "description": cleaned,
-                "raw_description": candidate,
-                "prompt": prompt_text,
-            }
-
+    raw_description = processor.decode(output_ids[0], skip_special_tokens=True).strip()
     return {
         "description": raw_description,
         "raw_description": raw_description,

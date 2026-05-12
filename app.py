@@ -235,7 +235,7 @@ def caption_image(image, model_name, remote_url, remote_model_id, remote_adapter
         if not description.strip():
             status = build_status(
                 "warn",
-                "The backend responded, but the generated description is empty after cleanup. Try a cleaner catalog image.",
+                "The backend responded, but the model returned an empty description. Try another image or increase max tokens.",
             )
         return description, status, payload
     except Exception as exc:
