@@ -151,6 +151,7 @@ async def caption(
     return {
         "description": result["description"],
         "raw_description": result["raw_description"],
+        "raw_output": result["raw_output"],
         "device": str(DEVICE),
         "model": "blip2",
         "model_id": resolved_model_id,

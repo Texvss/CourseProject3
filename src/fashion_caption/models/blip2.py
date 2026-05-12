@@ -23,6 +23,14 @@ def _resolve_torch_dtype(torch_dtype: Optional[str], device: torch.device, model
     return None
 
 
+def _strip_prompt_echo(text: str, prompt: str) -> str:
+    text = text.strip()
+    prompt = prompt.strip()
+    if prompt and text.lower().startswith(prompt.lower()):
+        return text[len(prompt) :].strip(" \n\t:.-")
+    return text
+
+
 def generate_text_details(
     image: Image.Image,
     processor,
@@ -35,10 +43,12 @@ def generate_text_details(
     inputs = processor(images=image.convert("RGB"), text=prompt_text, return_tensors="pt").to(model.device)
     with torch.no_grad():
         output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
-    raw_description = processor.decode(output_ids[0], skip_special_tokens=True).strip()
+    raw_output = processor.decode(output_ids[0], skip_special_tokens=True).strip()
+    raw_description = _strip_prompt_echo(raw_output, prompt_text)
     return {
         "description": raw_description,
         "raw_description": raw_description,
+        "raw_output": raw_output,
         "prompt": prompt_text,
     }
 
