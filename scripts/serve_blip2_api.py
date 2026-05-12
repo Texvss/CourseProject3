@@ -30,10 +30,7 @@ if str(SRC) not in sys.path:
 
 from fashion_caption.models import blip2  # noqa: E402
 
-DEFAULT_API_PROMPT = (
-    "Describe the garment for an e-commerce catalog in one short sentence. "
-    "Mention the clothing type, main color, and visible details."
-)
+DEFAULT_API_PROMPT = ""
 
 
 def parse_args() -> argparse.Namespace:

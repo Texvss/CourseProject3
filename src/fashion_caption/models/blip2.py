@@ -39,8 +39,11 @@ def generate_text_details(
     prompt: Optional[str] = None,
     max_new_tokens: int = 60,
 ) -> Dict[str, str]:
-    prompt_text = prompt or config.PROMPT
-    inputs = processor(images=image.convert("RGB"), text=prompt_text, return_tensors="pt").to(model.device)
+    prompt_text = config.PROMPT if prompt is None else prompt
+    if prompt_text:
+        inputs = processor(images=image.convert("RGB"), text=prompt_text, return_tensors="pt").to(model.device)
+    else:
+        inputs = processor(images=image.convert("RGB"), return_tensors="pt").to(model.device)
     with torch.no_grad():
         output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
     raw_output = processor.decode(output_ids[0], skip_special_tokens=True).strip()
