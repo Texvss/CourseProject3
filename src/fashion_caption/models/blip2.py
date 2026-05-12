@@ -1,6 +1,6 @@
 import re
 from pathlib import Path
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 import pandas as pd
 import torch
@@ -38,6 +38,32 @@ def _decode_generated_text(processor, inputs, output_ids: torch.Tensor, model_id
     return processor.decode(output_ids[0], skip_special_tokens=True).strip()
 
 
+def _strip_prompt_echo(text: str, prompt: str) -> str:
+    normalized_text = _normalize_spaces(text)
+    normalized_prompt = _normalize_spaces(prompt)
+    if normalized_prompt and normalized_text.lower().startswith(normalized_prompt.lower()):
+        return normalized_text[len(normalized_prompt) :].strip(" :.-")
+    return normalized_text
+
+
+def _decode_text_candidates(processor, inputs, output_ids: torch.Tensor, model_id: str, prompt: str) -> List[str]:
+    candidates = []
+    generated_text = _decode_generated_text(processor, inputs, output_ids, model_id=model_id)
+    if generated_text:
+        candidates.append(_strip_prompt_echo(generated_text, prompt))
+
+    full_text = processor.decode(output_ids[0], skip_special_tokens=True).strip()
+    if full_text:
+        candidates.append(_strip_prompt_echo(full_text, prompt))
+
+    deduped = []
+    for candidate in candidates:
+        candidate = _normalize_spaces(candidate)
+        if candidate and candidate not in deduped:
+            deduped.append(candidate)
+    return deduped
+
+
 def _clean_generated_description(text: str) -> str:
     cleaned = _normalize_spaces(text)
     cleaned = cleaned.replace("Product description:", "").strip()
@@ -51,6 +77,37 @@ def _clean_generated_description(text: str) -> str:
     return _normalize_spaces(cleaned)
 
 
+def generate_text_details(
+    image: Image.Image,
+    processor,
+    model,
+    model_id: str,
+    prompt: Optional[str] = None,
+    max_new_tokens: int = 60,
+) -> Dict[str, str]:
+    prompt_text = prompt or config.PROMPT
+    inputs = processor(images=image.convert("RGB"), text=prompt_text, return_tensors="pt").to(model.device)
+    with torch.no_grad():
+        output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
+    candidates = _decode_text_candidates(processor, inputs, output_ids, model_id=model_id, prompt=prompt_text)
+
+    raw_description = candidates[0] if candidates else ""
+    for candidate in candidates:
+        cleaned = _clean_generated_description(candidate)
+        if cleaned:
+            return {
+                "description": cleaned,
+                "raw_description": candidate,
+                "prompt": prompt_text,
+            }
+
+    return {
+        "description": raw_description,
+        "raw_description": raw_description,
+        "prompt": prompt_text,
+    }
+
+
 def generate_text(
     image: Image.Image,
     processor,
@@ -59,12 +116,14 @@ def generate_text(
     prompt: Optional[str] = None,
     max_new_tokens: int = 60,
 ) -> str:
-    prompt_text = prompt or config.PROMPT
-    inputs = processor(images=image.convert("RGB"), text=prompt_text, return_tensors="pt").to(model.device)
-    with torch.no_grad():
-        output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
-    text = _decode_generated_text(processor, inputs, output_ids, model_id=model_id)
-    return _clean_generated_description(text)
+    return generate_text_details(
+        image=image,
+        processor=processor,
+        model=model,
+        model_id=model_id,
+        prompt=prompt,
+        max_new_tokens=max_new_tokens,
+    )["description"]
 
 
 def load_model(

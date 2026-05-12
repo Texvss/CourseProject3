@@ -30,6 +30,11 @@ if str(SRC) not in sys.path:
 
 from fashion_caption.models import blip2  # noqa: E402
 
+DEFAULT_API_PROMPT = (
+    "Describe the garment for an e-commerce catalog in one short sentence. "
+    "Mention the clothing type, main color, and visible details."
+)
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run a BLIP-2 inference API.")
@@ -40,6 +45,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--adapter-path", default=None, help="Optional default LoRA adapter path.")
     parser.add_argument("--torch-dtype", default=None, help="Optional torch dtype, e.g. float16.")
     parser.add_argument("--max-new-tokens", type=int, default=60)
+    parser.add_argument("--prompt", default=DEFAULT_API_PROMPT)
     return parser.parse_args()
 
 
@@ -69,6 +75,7 @@ def health() -> dict:
         "device": str(DEVICE),
         "default_model_id": ARGS.model_id,
         "default_adapter_path": ARGS.adapter_path or "",
+        "default_prompt": ARGS.prompt,
         "cache_size": len(MODEL_CACHE),
     }
 
@@ -121,12 +128,12 @@ async def caption(
             adapter_path=resolved_adapter_path,
             torch_dtype=resolved_torch_dtype,
         )
-        description = blip2.generate_text(
+        result = blip2.generate_text_details(
             image=pil_image,
             processor=processor,
             model=model,
             model_id=resolved_model_id,
-            prompt=prompt,
+            prompt=prompt or ARGS.prompt,
             max_new_tokens=resolved_max_new_tokens,
         )
     except HTTPException:
@@ -142,11 +149,13 @@ async def caption(
         )
 
     return {
-        "description": description,
+        "description": result["description"],
+        "raw_description": result["raw_description"],
         "device": str(DEVICE),
         "model": "blip2",
         "model_id": resolved_model_id,
         "adapter_path": resolved_adapter_path or "",
+        "prompt": result["prompt"],
         "max_new_tokens": resolved_max_new_tokens,
     }
 
