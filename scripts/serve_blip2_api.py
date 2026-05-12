@@ -20,6 +20,7 @@ from typing import Dict, Optional, Tuple
 import torch
 import uvicorn
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
+from fastapi.responses import JSONResponse
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -72,6 +73,16 @@ def health() -> dict:
     }
 
 
+@app.get("/")
+def root() -> dict:
+    return {
+        "service": "fashion-captioning-blip2-api",
+        "ok": True,
+        "caption_endpoint": "/caption",
+        "health_endpoint": "/health",
+    }
+
+
 @app.post("/caption")
 async def caption(
     image: UploadFile = File(...),
@@ -95,19 +106,41 @@ async def caption(
     resolved_torch_dtype = torch_dtype if torch_dtype is not None else ARGS.torch_dtype
     resolved_max_new_tokens = max_new_tokens or ARGS.max_new_tokens
 
-    processor, model = get_model_bundle(
-        model_id=resolved_model_id,
-        adapter_path=resolved_adapter_path,
-        torch_dtype=resolved_torch_dtype,
-    )
-    description = blip2.generate_text(
-        image=pil_image,
-        processor=processor,
-        model=model,
-        model_id=resolved_model_id,
-        prompt=prompt,
-        max_new_tokens=resolved_max_new_tokens,
-    )
+    if resolved_adapter_path:
+        adapter_dir = Path(resolved_adapter_path)
+        adapter_config = adapter_dir / "adapter_config.json"
+        if not adapter_config.exists():
+            raise HTTPException(
+                status_code=400,
+                detail=f"LoRA adapter config not found at {adapter_config}",
+            )
+
+    try:
+        processor, model = get_model_bundle(
+            model_id=resolved_model_id,
+            adapter_path=resolved_adapter_path,
+            torch_dtype=resolved_torch_dtype,
+        )
+        description = blip2.generate_text(
+            image=pil_image,
+            processor=processor,
+            model=model,
+            model_id=resolved_model_id,
+            prompt=prompt,
+            max_new_tokens=resolved_max_new_tokens,
+        )
+    except HTTPException:
+        raise
+    except Exception as exc:  # pragma: no cover - defensive path for remote debugging
+        return JSONResponse(
+            status_code=500,
+            content={
+                "detail": str(exc),
+                "model_id": resolved_model_id,
+                "adapter_path": resolved_adapter_path or "",
+            },
+        )
+
     return {
         "description": description,
         "device": str(DEVICE),
