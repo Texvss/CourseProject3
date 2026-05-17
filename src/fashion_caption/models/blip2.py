@@ -31,6 +31,24 @@ def _strip_prompt_echo(text: str, prompt: str) -> str:
     return text
 
 
+def _decoder_prompt_length(inputs, output_ids, model) -> int:
+    """
+    BLIP-2 OPT uses a decoder-only language model and returns prompt + completion.
+    BLIP-2 FLAN/T5 is encoder-decoder and returns only the completion.
+    """
+    config = getattr(model, "config", None)
+    use_decoder_only = bool(getattr(config, "use_decoder_only_language_model", False))
+    if not use_decoder_only:
+        base_model = getattr(model, "base_model", None)
+        base_config = getattr(base_model, "config", None)
+        use_decoder_only = bool(getattr(base_config, "use_decoder_only_language_model", False))
+    if not use_decoder_only or "input_ids" not in inputs:
+        return 0
+    input_len = int(inputs["input_ids"].shape[-1])
+    output_len = int(output_ids.shape[-1])
+    return input_len if output_len > input_len else 0
+
+
 def generate_text_details(
     image: Image.Image,
     processor,
@@ -46,7 +64,9 @@ def generate_text_details(
         inputs = processor(images=image.convert("RGB"), return_tensors="pt").to(model.device)
     with torch.no_grad():
         output_ids = model.generate(**inputs, max_new_tokens=max_new_tokens)
-    raw_output = processor.decode(output_ids[0], skip_special_tokens=True).strip()
+    prompt_len = _decoder_prompt_length(inputs, output_ids, model)
+    decoded_ids = output_ids[0][prompt_len:] if prompt_len else output_ids[0]
+    raw_output = processor.decode(decoded_ids, skip_special_tokens=True).strip()
     raw_description = _strip_prompt_echo(raw_output, prompt_text)
     return {
         "description": raw_description,

@@ -1,4 +1,5 @@
 import argparse
+import json
 from pathlib import Path
 
 import numpy as np
@@ -10,7 +11,8 @@ from fashion_caption.models import vitgpt2, blip
 from fashion_caption.models import blip2
 from fashion_caption.visualization.sheets import make_results_sheet
 from fashion_caption.eval.metrics import ensure_nltk, bleu1
-from fashion_caption.postprocess.text import enforce_type_color
+from fashion_caption.eval.batch import export_generation_csv
+from fashion_caption.postprocess.text import clean_description
 
 
 def parse_args(argv=None) -> argparse.Namespace:
@@ -31,6 +33,20 @@ def parse_args(argv=None) -> argparse.Namespace:
     parser.add_argument("--blip2-adapter-path", default=None, help="Optional path to a LoRA adapter directory.")
     parser.add_argument("--blip2-max-new-tokens", type=int, default=60)
     parser.add_argument("--blip2-torch-dtype", default=None, help="Optional torch dtype for BLIP-2 (e.g., float16).")
+    parser.add_argument(
+        "--export-generation-csv",
+        default=None,
+        help="Optional CSV path for batch generation export. When set, runs the export helper and exits.",
+    )
+    parser.add_argument(
+        "--export-models",
+        default="vit-gpt2,blip",
+        help="Comma-separated model ids for --export-generation-csv (vit-gpt2, blip, blip2, blip2-lora, gpt).",
+    )
+    parser.add_argument("--export-n", type=int, default=None, help="Optional row count for the batch export.")
+    parser.add_argument("--prompt-id", default="ecommerce_v1", help="Prompt template id for generation export.")
+    parser.add_argument("--include-metrics", action="store_true", help="Include optional BLEU-1 in export metrics.")
+    parser.add_argument("--remote-url", default=None, help="Optional remote BLIP-2 /caption endpoint for batch export.")
     return parser.parse_args(argv)
 
 
@@ -51,6 +67,28 @@ def run(args: argparse.Namespace) -> None:
     df_sanity, df_eval = split_dataset(df_topwear, sanity_n=args.sanity_n, eval_n=args.eval_n, seed=config.SEED)
     print(f"Sanity set: {len(df_sanity)} rows; eval set: {len(df_eval)} rows.")
 
+    if args.export_generation_csv:
+        export_df = df_sanity.iloc[: args.export_n].copy() if args.export_n else df_sanity
+        export_models = [item.strip() for item in args.export_models.split(",") if item.strip()]
+        metrics = export_generation_csv(
+            df=export_df,
+            out_csv=Path(args.export_generation_csv).resolve(),
+            model_ids=export_models,
+            prompt_id=args.prompt_id,
+            include_metrics=args.include_metrics,
+            device=device,
+            params={
+                "remote_url": args.remote_url,
+                "hf_model_id": args.blip2_model_id,
+                "adapter_path": args.blip2_adapter_path,
+                "torch_dtype": args.blip2_torch_dtype,
+                "max_new_tokens": args.blip2_max_new_tokens,
+            },
+        )
+        print(f"Saved generation export to {Path(args.export_generation_csv).resolve()}")
+        print(json.dumps(metrics, indent=2))
+        return
+
     vit_results = None
     blip_results = None
     blip2_results = None
@@ -59,7 +97,12 @@ def run(args: argparse.Namespace) -> None:
         vit_results = vitgpt2.caption(df_sanity, device=device)
         vit_results["description_raw"] = vit_results["description"]
         vit_results["description"] = vit_results.apply(
-            lambda r: enforce_type_color(r["description_raw"], r.get("articleType"), r.get("baseColour")),
+            lambda r: clean_description(
+                r["description_raw"],
+                prompt=config.PROMPT,
+                article_type=r.get("articleType"),
+                base_colour=r.get("baseColour"),
+            ),
             axis=1,
         )
         vit_results.to_csv(out_dir / "df_vitgpt2_sanity.csv", index=False)
@@ -68,7 +111,12 @@ def run(args: argparse.Namespace) -> None:
         blip_results = blip.caption(df_sanity, device=device)
         blip_results["description_raw"] = blip_results["description"]
         blip_results["description"] = blip_results.apply(
-            lambda r: enforce_type_color(r["description_raw"], r.get("articleType"), r.get("baseColour")),
+            lambda r: clean_description(
+                r["description_raw"],
+                prompt=config.PROMPT,
+                article_type=r.get("articleType"),
+                base_colour=r.get("baseColour"),
+            ),
             axis=1,
         )
         blip_results.to_csv(out_dir / "df_blip_sanity.csv", index=False)
@@ -84,7 +132,12 @@ def run(args: argparse.Namespace) -> None:
         )
         blip2_results["description_raw"] = blip2_results["description"]
         blip2_results["description"] = blip2_results.apply(
-            lambda r: enforce_type_color(r["description_raw"], r.get("articleType"), r.get("baseColour")),
+            lambda r: clean_description(
+                r["description_raw"],
+                prompt=config.PROMPT,
+                article_type=r.get("articleType"),
+                base_colour=r.get("baseColour"),
+            ),
             axis=1,
         )
         blip2_results.to_csv(out_dir / "df_blip2_sanity.csv", index=False)

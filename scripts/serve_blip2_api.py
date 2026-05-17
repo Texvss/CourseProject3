@@ -29,8 +29,11 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from fashion_caption.models import blip2  # noqa: E402
+from fashion_caption.generation.registry import GptGenerator, OpenAIConfigurationError, OpenAIGenerationError  # noqa: E402
+from fashion_caption.postprocess.text import clean_description  # noqa: E402
+from fashion_caption.prompts import ECOMMERCE_PROTOCOL, PromptConfig, get_prompt_config  # noqa: E402
 
-DEFAULT_API_PROMPT = ""
+DEFAULT_API_PROMPT = ECOMMERCE_PROTOCOL
 
 
 def parse_args() -> argparse.Namespace:
@@ -83,6 +86,7 @@ def root() -> dict:
         "service": "fashion-captioning-blip2-api",
         "ok": True,
         "caption_endpoint": "/caption",
+        "gpt_endpoint": "/api/generate/gpt",
         "health_endpoint": "/health",
     }
 
@@ -94,6 +98,9 @@ async def caption(
     adapter_path: Optional[str] = Form(default=None),
     torch_dtype: Optional[str] = Form(default=None),
     prompt: Optional[str] = Form(default=None),
+    prompt_id: Optional[str] = Form(default="ecommerce_v1"),
+    article_type: Optional[str] = Form(default=""),
+    base_colour: Optional[str] = Form(default=""),
     max_new_tokens: Optional[int] = Form(default=None),
 ) -> dict:
     raw = await image.read()
@@ -109,6 +116,12 @@ async def caption(
     resolved_adapter_path = adapter_path if adapter_path is not None else ARGS.adapter_path
     resolved_torch_dtype = torch_dtype if torch_dtype is not None else ARGS.torch_dtype
     resolved_max_new_tokens = max_new_tokens or ARGS.max_new_tokens
+    prompt_config = _prompt_config(
+        prompt_id=prompt_id,
+        prompt=prompt if prompt is not None else ARGS.prompt,
+        article_type=article_type,
+        base_colour=base_colour,
+    )
 
     if resolved_adapter_path:
         adapter_dir = Path(resolved_adapter_path)
@@ -130,8 +143,14 @@ async def caption(
             processor=processor,
             model=model,
             model_id=resolved_model_id,
-            prompt=prompt or ARGS.prompt,
+            prompt=prompt_config.prompt,
             max_new_tokens=resolved_max_new_tokens,
+        )
+        description = clean_description(
+            result["description"],
+            prompt=prompt_config.prompt,
+            article_type=article_type,
+            base_colour=base_colour,
         )
     except HTTPException:
         raise
@@ -146,7 +165,7 @@ async def caption(
         )
 
     return {
-        "description": result["description"],
+        "description": description,
         "raw_description": result["raw_description"],
         "raw_output": result["raw_output"],
         "device": str(DEVICE),
@@ -154,7 +173,77 @@ async def caption(
         "model_id": resolved_model_id,
         "adapter_path": resolved_adapter_path or "",
         "prompt": result["prompt"],
+        "prompt_id": prompt_config.prompt_id,
+        "articleType": article_type or "",
+        "baseColour": base_colour or "",
         "max_new_tokens": resolved_max_new_tokens,
+    }
+
+
+def _prompt_config(
+    prompt_id: Optional[str],
+    prompt: Optional[str],
+    article_type: Optional[str],
+    base_colour: Optional[str],
+) -> PromptConfig:
+    if prompt and prompt.strip() and prompt.strip() != ECOMMERCE_PROTOCOL:
+        return PromptConfig(
+            prompt_id=prompt_id or "custom",
+            template=prompt.strip(),
+            article_type=(article_type or "").strip(),
+            base_colour=(base_colour or "").strip(),
+        )
+    return get_prompt_config(
+        prompt_id=prompt_id or "ecommerce_v1",
+        article_type=article_type,
+        base_colour=base_colour,
+    )
+
+
+@app.post("/api/generate/gpt")
+async def generate_gpt(
+    image: UploadFile = File(...),
+    prompt: Optional[str] = Form(default=None),
+    prompt_id: Optional[str] = Form(default="ecommerce_v1"),
+    article_type: Optional[str] = Form(default=""),
+    base_colour: Optional[str] = Form(default=""),
+    openai_model: Optional[str] = Form(default=None),
+    max_output_tokens: Optional[int] = Form(default=80),
+) -> dict:
+    raw = await image.read()
+    if not raw:
+        raise HTTPException(status_code=400, detail="Empty image payload.")
+
+    try:
+        pil_image = Image.open(io.BytesIO(raw)).convert("RGB")
+    except Exception as exc:  # pragma: no cover - defensive path
+        raise HTTPException(status_code=400, detail=f"Failed to decode image: {exc}") from exc
+
+    prompt_config = _prompt_config(
+        prompt_id=prompt_id,
+        prompt=prompt,
+        article_type=article_type,
+        base_colour=base_colour,
+    )
+    try:
+        result = GptGenerator().generate(
+            image=pil_image,
+            prompt_config=prompt_config,
+            params={
+                "openai_model": openai_model,
+                "max_output_tokens": max_output_tokens or 80,
+            },
+        )
+    except OpenAIConfigurationError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except OpenAIGenerationError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+    except Exception as exc:  # pragma: no cover - defensive path for remote debugging
+        raise HTTPException(status_code=500, detail=str(exc)) from exc
+
+    return {
+        "description": result.text,
+        "meta": result.meta,
     }
 
 

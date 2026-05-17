@@ -1,3 +1,3 @@
 """
-Simple postprocessing helpers to enforce type/color from metadata.
+Post-processing helpers for e-commerce product descriptions.
 """
