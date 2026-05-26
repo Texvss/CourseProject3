@@ -22,3 +22,8 @@ outputs/
 
 .DS_Store*.zip
 echo "data.zip" >> .gitignore
+# macOS
+.DS_Store
+
+# large local artifacts
+data.zip
