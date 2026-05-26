@@ -96,6 +96,7 @@ class VitGpt2Generator:
                 "model_id": self.model_id,
                 "instruction_capable": self.instruction_capable,
                 "device": str(self.device),
+                "raw_description": result["raw_description"],
                 "raw_output": result["raw_output"],
                 "latency_ms": latency_ms,
             },
@@ -136,6 +137,7 @@ class BlipGenerator:
                 "model_id": self.model_id,
                 "instruction_capable": self.instruction_capable,
                 "device": str(self.device),
+                "raw_description": result["raw_description"],
                 "raw_output": result["raw_output"],
                 "latency_ms": latency_ms,
             },
@@ -154,7 +156,7 @@ class Blip2Generator:
     def generate(self, image: Image.Image, prompt_config: PromptConfig, params: Dict[str, Any]) -> GenerationResult:
         from fashion_caption.models import blip2
 
-        hf_model_id = params.get("model_id") or "Salesforce/blip2-opt-2.7b"
+        hf_model_id = params.get("hf_model_id") or params.get("model_id") or "Salesforce/blip2-opt-2.7b"
         adapter_path = params.get("adapter_path") or self.adapter_path
         torch_dtype = params.get("torch_dtype") or ""
         cache_key = (hf_model_id, adapter_path or "", torch_dtype)
@@ -187,6 +189,7 @@ class Blip2Generator:
                 "adapter_path": adapter_path or "",
                 "instruction_capable": self.instruction_capable,
                 "device": str(self.device),
+                "raw_description": result["raw_description"],
                 "raw_output": result["raw_output"],
                 "prompt_id": prompt_config.prompt_id,
                 "latency_ms": latency_ms,
@@ -254,7 +257,7 @@ class RemoteBlip2Generator:
             raise RuntimeError(f"Failed to reach remote BLIP-2 backend: {exc.reason}") from exc
 
         latency_ms = int((time.perf_counter() - started) * 1000)
-        raw_text = payload.get("description", "")
+        raw_text = payload.get("raw_description") or payload.get("description", "")
         text = _clean_result(raw_text, prompt_config, params)
         meta = dict(payload)
         meta.update(
@@ -262,6 +265,7 @@ class RemoteBlip2Generator:
                 "model_id": self.model_id,
                 "instruction_capable": self.instruction_capable,
                 "remote_url": remote_url,
+                "raw_description": raw_text,
                 "latency_ms": latency_ms,
             }
         )
@@ -297,6 +301,8 @@ class GptGenerator:
             meta={
                 "model_id": self.model_id,
                 "openai_model": payload.get("model"),
+                "raw_description": payload["text"],
+                "raw_output": payload["text"],
                 "usage": payload.get("usage") or {},
                 "latency_ms": payload.get("latency_ms"),
                 "response_id": payload.get("response_id"),
