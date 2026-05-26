@@ -1,19 +1,3 @@
-"""
-LoRA fine-tuning for BLIP-2 on the local fashion dataset.
-
-This script mirrors the safer notebook setup:
-- defaults to `Salesforce/blip2-opt-2.7b`
-- uses small, cleaned catalog-style targets
-- enables gradient checkpointing and gradient accumulation
-- avoids the common torchao/peft incompatibility
-
-Example:
-    HF_HOME=.cache/huggingface \
-    accelerate launch scripts/train_lora.py \
-        --data-root data \
-        --out-dir lora-blip2-ecommerce
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -100,8 +84,6 @@ def sanitize_target_description(text: str, row: pd.Series) -> str:
 
 
 def make_training_prompt(row: pd.Series) -> str:
-    # Previous prompts included gold color/type labels, making copying enough.
-    # Keep the prompt style-only so the adapter learns catalog phrasing.
     return (
         "Write a short e-commerce garment description in one sentence. "
         "Mention only visible clothing details. Do not mention people, poses, or background."

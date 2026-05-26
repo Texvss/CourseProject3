@@ -1,3 +1,0 @@
-"""
-Evaluation helpers (BLEU, etc.).
-"""

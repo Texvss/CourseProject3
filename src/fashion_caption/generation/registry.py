@@ -353,7 +353,7 @@ class ModelRegistry:
             generator = Blip2Generator(device=self.device, adapter_path=params.get("adapter_path"))
         elif normalized == "gpt":
             generator = GptGenerator()
-        else:  # pragma: no cover - normalized guard above keeps this unreachable.
+        else:
             raise KeyError(f"Unknown model id: {model_id}")
 
         self._instances[cache_key] = generator

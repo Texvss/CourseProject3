@@ -1,7 +1,3 @@
-"""
-Thin wrapper to run the refactored pipeline package from the project root.
-Allows: python3 pipeline.py ... without manually exporting PYTHONPATH.
-"""
 import sys
 from pathlib import Path
 

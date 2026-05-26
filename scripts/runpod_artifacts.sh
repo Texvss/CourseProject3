@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 set -Eeuo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -51,7 +50,6 @@ if [[ -n "$REMOTE_URL" ]]; then
 fi
 
 if [[ -d .venv ]]; then
-  # shellcheck disable=SC1091
   source .venv/bin/activate
 fi
 

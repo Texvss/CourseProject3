@@ -1,14 +1,3 @@
-"""
-Small FastAPI server for BLIP-2 / BLIP-2 LoRA inference on RunPod.
-
-Example:
-    PYTHONPATH=src python scripts/serve_blip2_api.py \
-        --host 0.0.0.0 \
-        --port 8000 \
-        --device cuda \
-        --model-id Salesforce/blip2-opt-2.7b
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -28,10 +17,10 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from fashion_caption.models import blip2  # noqa: E402
-from fashion_caption.generation.registry import GptGenerator, OpenAIConfigurationError, OpenAIGenerationError  # noqa: E402
-from fashion_caption.postprocess.text import clean_description  # noqa: E402
-from fashion_caption.prompts import ECOMMERCE_PROTOCOL, PromptConfig, get_prompt_config  # noqa: E402
+from fashion_caption.models import blip2
+from fashion_caption.generation.registry import GptGenerator, OpenAIConfigurationError, OpenAIGenerationError
+from fashion_caption.postprocess.text import clean_description
+from fashion_caption.prompts import ECOMMERCE_PROTOCOL, PromptConfig, get_prompt_config
 
 DEFAULT_API_PROMPT = ECOMMERCE_PROTOCOL
 
@@ -113,7 +102,7 @@ async def caption(
 
     try:
         pil_image = Image.open(io.BytesIO(raw)).convert("RGB")
-    except Exception as exc:  # pragma: no cover - defensive path
+    except Exception as exc:
         raise HTTPException(status_code=400, detail=f"Failed to decode image: {exc}") from exc
 
     resolved_model_id = model_id or ARGS.model_id
@@ -160,7 +149,7 @@ async def caption(
         )
     except HTTPException:
         raise
-    except Exception as exc:  # pragma: no cover - defensive path for remote debugging
+    except Exception as exc:
         return JSONResponse(
             status_code=500,
             content={
@@ -224,7 +213,7 @@ async def generate_gpt(
 
     try:
         pil_image = Image.open(io.BytesIO(raw)).convert("RGB")
-    except Exception as exc:  # pragma: no cover - defensive path
+    except Exception as exc:
         raise HTTPException(status_code=400, detail=f"Failed to decode image: {exc}") from exc
 
     prompt_config = _prompt_config(
@@ -246,7 +235,7 @@ async def generate_gpt(
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except OpenAIGenerationError as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
-    except Exception as exc:  # pragma: no cover - defensive path for remote debugging
+    except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 
     return {

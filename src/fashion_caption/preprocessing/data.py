@@ -7,9 +7,6 @@ from fashion_caption import config
 
 
 def load_dataset(data_root: Path) -> pd.DataFrame:
-    """
-    Read styles.csv, attach image paths, drop rows without corresponding JPEG files.
-    """
     styles_path = data_root / "styles.csv"
     images_path = data_root / "images"
     if not styles_path.exists():

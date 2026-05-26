@@ -107,7 +107,6 @@ def title_item_type(article_type: Optional[str]) -> str:
     value = re.sub(r"\s+", " ", str(article_type or "").strip())
     if not value:
         return ""
-    # Dataset labels are often plural; singular reads better in catalog copy.
     singular_map = {
         "Tshirts": "T-shirt",
         "Shirts": "shirt",
@@ -151,7 +150,6 @@ def strip_prompt_echo(text: str, prompt: Optional[str] = None) -> str:
             continue
         if normalize(out).startswith(normalize(candidate)):
             out = out[len(candidate) :].strip(" \n\t:.-")
-        # Some models echo the tail of the instruction block before the answer.
         tail = "return only the description text"
         tail_index = normalize(out).find(tail)
         if tail_index >= 0:

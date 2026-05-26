@@ -1,4 +1,3 @@
-# Python cache and build artifacts
 __pycache__/
 *.py[cod]
 *.so
@@ -7,23 +6,18 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 
-# Virtual environments
 .venv/
 venv/
 env/
 
-# Local caches
 .cache/
 .matplotlib/
 
-# Model and dataset artifacts
 data/
 outputs/
 
-# Notebook and editor noise
 .ipynb_checkpoints/
 .vscode/
 .idea/
 
-# OS files
 .DS_Store

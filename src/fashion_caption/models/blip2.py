@@ -34,7 +34,7 @@ def _quantization_kwargs(quant: Optional[str], device: torch.device) -> tuple[di
         print(f"BLIP-2 {quant} quantization requires CUDA; loading without quantization.")
         return {}, False
     try:
-        import bitsandbytes  # noqa: F401
+        import bitsandbytes
         from transformers import BitsAndBytesConfig
     except ImportError:
         print(f"bitsandbytes is not installed; loading BLIP-2 without {quant} quantization.")

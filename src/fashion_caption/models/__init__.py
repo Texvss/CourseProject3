@@ -1,3 +1,0 @@
-"""
-Captioning models and loaders.
-"""
