@@ -44,6 +44,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model-id", default="Salesforce/blip2-opt-2.7b")
     parser.add_argument("--adapter-path", default=None, help="Optional default LoRA adapter path.")
     parser.add_argument("--torch-dtype", default=None, help="Optional torch dtype, e.g. float16.")
+    parser.add_argument("--quant", default=None, help="Optional BLIP-2 quantization: none, 8bit, or 4bit.")
     parser.add_argument("--max-new-tokens", type=int, default=60)
     parser.add_argument("--prompt", default=DEFAULT_API_PROMPT)
     return parser.parse_args()
@@ -51,19 +52,20 @@ def parse_args() -> argparse.Namespace:
 
 ARGS = parse_args()
 DEVICE = torch.device(ARGS.device if ARGS.device else ("cuda" if torch.cuda.is_available() else "cpu"))
-MODEL_CACHE: Dict[Tuple[str, str, str], Tuple[object, object]] = {}
+MODEL_CACHE: Dict[Tuple[str, str, str, str], Tuple[object, object]] = {}
 
 app = FastAPI(title="Fashion Captioning BLIP-2 API")
 
 
-def get_model_bundle(model_id: str, adapter_path: Optional[str], torch_dtype: Optional[str]):
-    cache_key = (model_id, adapter_path or "", torch_dtype or "")
+def get_model_bundle(model_id: str, adapter_path: Optional[str], torch_dtype: Optional[str], quant: Optional[str]):
+    cache_key = (model_id, adapter_path or "", torch_dtype or "", quant or "")
     if cache_key not in MODEL_CACHE:
         MODEL_CACHE[cache_key] = blip2.load_model(
             DEVICE,
             model_id=model_id,
             torch_dtype=torch_dtype,
             adapter_path=adapter_path,
+            quant=quant,
         )
     return MODEL_CACHE[cache_key]
 
@@ -75,6 +77,7 @@ def health() -> dict:
         "device": str(DEVICE),
         "default_model_id": ARGS.model_id,
         "default_adapter_path": ARGS.adapter_path or "",
+        "default_quant": ARGS.quant or "none",
         "default_prompt": ARGS.prompt,
         "cache_size": len(MODEL_CACHE),
     }
@@ -97,6 +100,7 @@ async def caption(
     model_id: Optional[str] = Form(default=None),
     adapter_path: Optional[str] = Form(default=None),
     torch_dtype: Optional[str] = Form(default=None),
+    quant: Optional[str] = Form(default=None),
     prompt: Optional[str] = Form(default=None),
     prompt_id: Optional[str] = Form(default="ecommerce_v1"),
     article_type: Optional[str] = Form(default=""),
@@ -115,6 +119,7 @@ async def caption(
     resolved_model_id = model_id or ARGS.model_id
     resolved_adapter_path = adapter_path if adapter_path is not None else ARGS.adapter_path
     resolved_torch_dtype = torch_dtype if torch_dtype is not None else ARGS.torch_dtype
+    resolved_quant = quant if quant is not None else ARGS.quant
     resolved_max_new_tokens = max_new_tokens or ARGS.max_new_tokens
     prompt_config = _prompt_config(
         prompt_id=prompt_id,
@@ -137,6 +142,7 @@ async def caption(
             model_id=resolved_model_id,
             adapter_path=resolved_adapter_path,
             torch_dtype=resolved_torch_dtype,
+            quant=resolved_quant,
         )
         result = blip2.generate_text_details(
             image=pil_image,
@@ -161,6 +167,7 @@ async def caption(
                 "detail": str(exc),
                 "model_id": resolved_model_id,
                 "adapter_path": resolved_adapter_path or "",
+                "quant": resolved_quant or "none",
             },
         )
 
@@ -172,6 +179,7 @@ async def caption(
         "model": "blip2",
         "model_id": resolved_model_id,
         "adapter_path": resolved_adapter_path or "",
+        "quant": resolved_quant or "none",
         "prompt": result["prompt"],
         "prompt_id": prompt_config.prompt_id,
         "articleType": article_type or "",

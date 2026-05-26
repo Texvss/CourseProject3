@@ -1,5 +1,6 @@
 from pathlib import Path
 from typing import Dict, List, Optional
+import os
 
 import pandas as pd
 import torch
@@ -21,6 +22,33 @@ def _resolve_torch_dtype(torch_dtype: Optional[str], device: torch.device, model
             return torch.bfloat16
         return torch.float16
     return None
+
+
+def _quantization_kwargs(quant: Optional[str], device: torch.device) -> tuple[dict, bool]:
+    quant = (quant or os.environ.get("BLIP2_QUANT", "none")).strip().lower()
+    if quant in {"", "none", "false", "0"}:
+        return {}, False
+    if quant not in {"8bit", "4bit"}:
+        raise ValueError("BLIP2_QUANT must be one of: none, 8bit, 4bit")
+    if device.type != "cuda":
+        print(f"BLIP-2 {quant} quantization requires CUDA; loading without quantization.")
+        return {}, False
+    try:
+        import bitsandbytes  # noqa: F401
+        from transformers import BitsAndBytesConfig
+    except ImportError:
+        print(f"bitsandbytes is not installed; loading BLIP-2 without {quant} quantization.")
+        return {}, False
+    if quant == "8bit":
+        config = BitsAndBytesConfig(load_in_8bit=True)
+    else:
+        config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_compute_dtype=torch.float16,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_use_double_quant=True,
+        )
+    return {"quantization_config": config, "device_map": {"": device.index or 0}}, True
 
 
 def _strip_prompt_echo(text: str, prompt: str) -> str:
@@ -99,17 +127,21 @@ def load_model(
     model_id: str = "Salesforce/blip2-opt-2.7b",
     torch_dtype: Optional[str] = None,
     adapter_path: Optional[str] = None,
+    quant: Optional[str] = None,
 ):
     """
     Default: blip2-opt-2.7b (public). You can pass blip2-flan-t5-xl/xxl if you have access and enough VRAM.
     """
     dtype = _resolve_torch_dtype(torch_dtype, device, model_id)
-    model_kwargs = {}
-    if dtype is not None:
+    quant_kwargs, quantized = _quantization_kwargs(quant, device)
+    model_kwargs = dict(quant_kwargs)
+    if dtype is not None and not quantized:
         model_kwargs["torch_dtype"] = dtype
 
     processor = AutoProcessor.from_pretrained(model_id)
-    model = Blip2ForConditionalGeneration.from_pretrained(model_id, **model_kwargs).to(device)
+    model = Blip2ForConditionalGeneration.from_pretrained(model_id, **model_kwargs)
+    if not quantized:
+        model = model.to(device)
     if adapter_path:
         adapter_dir = Path(adapter_path)
         adapter_config = adapter_dir / "adapter_config.json"
@@ -119,7 +151,9 @@ def load_model(
             from peft import PeftModel
         except ImportError as exc:
             raise ImportError("Install peft to load a LoRA adapter.") from exc
-        model = PeftModel.from_pretrained(model, str(adapter_dir)).to(device)
+        model = PeftModel.from_pretrained(model, str(adapter_dir))
+        if not quantized:
+            model = model.to(device)
     model.eval()
     return processor, model
 
@@ -132,12 +166,14 @@ def caption(
     torch_dtype: Optional[str] = None,
     prompt: Optional[str] = None,
     adapter_path: Optional[str] = None,
+    quant: Optional[str] = None,
 ) -> pd.DataFrame:
     processor, model = load_model(
         device,
         model_id=model_id,
         torch_dtype=torch_dtype,
         adapter_path=adapter_path,
+        quant=quant,
     )
     rows: List[dict] = []
     for _, row in tqdm(df.iterrows(), total=len(df), desc="BLIP-2"):

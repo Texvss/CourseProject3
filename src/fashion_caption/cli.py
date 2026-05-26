@@ -34,6 +34,7 @@ def parse_args(argv=None) -> argparse.Namespace:
     parser.add_argument("--blip2-adapter-path", default=None, help="Optional path to a LoRA adapter directory.")
     parser.add_argument("--blip2-max-new-tokens", type=int, default=60)
     parser.add_argument("--blip2-torch-dtype", default=None, help="Optional torch dtype for BLIP-2 (e.g., float16).")
+    parser.add_argument("--blip2-quant", default=None, help="Optional BLIP-2 quantization: none, 8bit, or 4bit.")
     parser.add_argument(
         "--export-generation-csv",
         default=None,
@@ -87,6 +88,7 @@ def run(args: argparse.Namespace) -> None:
                 "hf_model_id": args.blip2_model_id,
                 "adapter_path": args.blip2_adapter_path,
                 "torch_dtype": args.blip2_torch_dtype,
+                "quant": args.blip2_quant,
                 "max_new_tokens": args.blip2_max_new_tokens,
             },
         )
@@ -134,6 +136,7 @@ def run(args: argparse.Namespace) -> None:
             max_new_tokens=args.blip2_max_new_tokens,
             torch_dtype=args.blip2_torch_dtype,
             adapter_path=args.blip2_adapter_path,
+            quant=args.blip2_quant,
         )
         blip2_results["description_raw"] = blip2_results["description"]
         blip2_results["description"] = blip2_results.apply(
@@ -184,6 +187,7 @@ def run(args: argparse.Namespace) -> None:
             max_new_tokens=args.blip2_max_new_tokens,
             torch_dtype=args.blip2_torch_dtype,
             adapter_path=args.blip2_adapter_path,
+            quant=args.blip2_quant,
         )
         df_eval_blip2 = df_eval[["id", "productDisplayName"]].merge(df_eval_blip2, on="id", how="inner")
         df_eval_blip2["reference"] = df_eval_blip2["productDisplayName"]

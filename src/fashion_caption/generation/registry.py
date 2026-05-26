@@ -152,7 +152,7 @@ class Blip2Generator:
     def __init__(self, device=None, adapter_path: Optional[str] = None):
         self.device = device or auto_device()
         self.adapter_path = adapter_path or ""
-        self._cache: Dict[tuple[str, str, str], tuple[object, object]] = {}
+        self._cache: Dict[tuple[str, str, str, str], tuple[object, object]] = {}
 
     def generate(self, image: Image.Image, prompt_config: PromptConfig, params: Dict[str, Any]) -> GenerationResult:
         from fashion_caption.models import blip2
@@ -160,13 +160,15 @@ class Blip2Generator:
         hf_model_id = params.get("hf_model_id") or params.get("model_id") or "Salesforce/blip2-opt-2.7b"
         adapter_path = params.get("adapter_path") or self.adapter_path
         torch_dtype = params.get("torch_dtype") or ""
-        cache_key = (hf_model_id, adapter_path or "", torch_dtype)
+        quant = params.get("quant") or ""
+        cache_key = (hf_model_id, adapter_path or "", torch_dtype, quant)
         if cache_key not in self._cache:
             self._cache[cache_key] = blip2.load_model(
                 self.device,
                 model_id=hf_model_id,
                 torch_dtype=torch_dtype or None,
                 adapter_path=adapter_path or None,
+                quant=quant or None,
             )
 
         processor, model = self._cache[cache_key]
@@ -228,6 +230,7 @@ class RemoteBlip2Generator:
         adapter_path = params.get("adapter_path") if self.model_id == "blip2-lora" else ""
         add_field("model_id", params.get("hf_model_id") or params.get("model_id") or "Salesforce/blip2-opt-2.7b")
         add_field("adapter_path", adapter_path or "")
+        add_field("quant", params.get("quant") or "")
         add_field("max_new_tokens", str(_max_new_tokens(params, 60)))
         add_field("prompt", prompt_config.prompt)
         parts.extend(
