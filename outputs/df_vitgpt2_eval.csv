@@ -1,0 +1,3901 @@
+id,image_path,articleType,baseColour,productDisplayName,model_id,prompt_id,prompt,raw_output,cleaned_output,generated_text,error
+11048,data/images/11048.jpg,Shirts,Red,Scullers Men Check Red Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Red.",a man standing in front of a white wall,A red shirt.,A red shirt.,
+20160,data/images/20160.jpg,Shirts,Grey,Wrangler Men Dirt Rider Grey Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Grey.",a man standing in front of a white wall,A grey shirt.,A grey shirt.,
+8414,data/images/8414.jpg,Tshirts,White,Doodle Girl's Hippie Chic White Kidswear,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a man dressed in a costume holding a skateboard,A white T-shirt.,A white T-shirt.,
+11014,data/images/11014.jpg,Shirts,Blue,Wrangler Women Polka Blue Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a woman standing in front of a blue wall,A blue shirt.,A blue shirt.,
+57134,data/images/57134.jpg,Tops,White,Elle Women Printed White Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: White.",a woman standing in front of a white wall,A white top.,A white top.,
+59115,data/images/59115.jpg,Jackets,Navy Blue,Just Natural Men Navy Blue Jacket,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Jackets.
+
+Known main color: Navy Blue.",a man standing in front of a wall,A navy blue jacket.,A navy blue jacket.,
+17189,data/images/17189.jpg,Shirts,Maroon,U.S. Polo Assn. Men Checks Maroon Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Maroon.",a man wearing a tie standing in front of a wall,A maroon shirt.,A maroon shirt.,
+12339,data/images/12339.jpg,Shirts,White,Mark Taylor Men White Striped Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man in a suit and tie standing in front of a wall,A white shirt.,A white shirt.,
+29150,data/images/29150.jpg,Tops,Off White,United Colors of Benetton Girls Printed Off White Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Off White.",a white vase with a picture of a woman on it,A off white top.,A off white top.,
+6587,data/images/6587.jpg,Tshirts,Black,Inkfruit Men's Rock The Cure Black T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a man in a black shirt holding a nintendo wii game controller,A black T-shirt.,A black T-shirt.,
+39834,data/images/39834.jpg,Tshirts,Yellow,Gini and Jony Boys Striped Yellow T-Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Yellow.",a teddy bear sitting on top of a blanket,A yellow T-shirt.,A yellow T-shirt.,
+19425,data/images/19425.jpg,Shirts,Blue,Quiksilver Men Blue Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man standing in front of a white wall,A blue shirt.,A blue shirt.,
+14083,data/images/14083.jpg,Sweaters,Purple,Flying Machine Women Stripes Purple Sweaters,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Sweaters.
+
+Known main color: Purple.",a woman standing in front of a white wall,A purple sweater.,A purple sweater.,
+5806,data/images/5806.jpg,Tshirts,Red,ADIDAS Women's Graphic Red T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Red.",a woman in a red dress standing in front of a wall,A red T-shirt.,A red T-shirt.,
+10711,data/images/10711.jpg,Tshirts,White,Nike Women White Casual T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a black and white photo of a white and blue frisbee,A white T-shirt.,A white T-shirt.,
+43592,data/images/43592.jpg,Tshirts,Pink,Gini and Jony Girls Polo Striped Pink T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Pink.",a woman in a pink dress standing in front of a white wall,A pink T-shirt.,A pink T-shirt.,
+30358,data/images/30358.jpg,Tshirts,Off White,Myntra Men Rodeo Off White T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Off White.",a man standing in front of a white wall,A off white T-shirt.,A off white T-shirt.,
+33140,data/images/33140.jpg,Tshirts,Navy Blue,Gini and Jony Boys Printed Navy Blue T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Navy Blue.",a black and white photo of a shirtless man,A navy blue T-shirt.,A navy blue T-shirt.,
+52070,data/images/52070.jpg,Tshirts,Green,Myntra Men Green T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a man standing in front of a green wall,A green T-shirt.,A green T-shirt.,
+15579,data/images/15579.jpg,Shirts,White,Mark Taylor Men White & Blue Striped Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man in a suit and tie standing in front of a wall,A white shirt.,A white shirt.,
+9530,data/images/9530.jpg,Tshirts,White,Nike Men Coolfitted White T-Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a black and white photo of a man in a white shirt,A white T-shirt.,A white T-shirt.,
+4033,data/images/4033.jpg,Tshirts,Black,Myntra Men's I am Not Paid enough To Be Nice Black T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a man with a beard standing in front of a wall,A black T-shirt.,A black T-shirt.,
+4386,data/images/4386.jpg,Tshirts,Grey,Wrangler Cowboy Photo T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Grey.",a man standing in front of a wall,A grey T-shirt.,A grey T-shirt.,
+2347,data/images/2347.jpg,Tshirts,White,Reebok Men White Contrasts T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a man standing in front of a white wall,A white T-shirt.,A white T-shirt.,
+42200,data/images/42200.jpg,Tops,Yellow,Sepia Women Yellow Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Yellow.",a girl in a pink dress standing in front of a white wall,A yellow top.,A yellow top.,
+43654,data/images/43654.jpg,Tops,Cream,ONLY Women Cream Printed Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Cream.",a woman standing in front of a wall holding a pink purse,A cream top.,A cream top.,
+19162,data/images/19162.jpg,Tshirts,Blue,United Colors of Benetton Men Solid Blue Tshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a man standing in front of a white wall,A blue T-shirt.,A blue T-shirt.,
+37982,data/images/37982.jpg,Tshirts,Grey,Classic Polo Men Striped Grey & White T-Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Grey.",a man standing in front of a white wall,A grey T-shirt.,A grey T-shirt.,
+12208,data/images/12208.jpg,Tshirts,Green,Basics Men Green Striped T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a man standing in front of a wall wearing a shirt and tie,A green T-shirt.,A green T-shirt.,
+10185,data/images/10185.jpg,Shirts,White,Indigo Nation Men Price catch White Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man in a suit and tie standing in front of a wall,A white shirt.,A white shirt.,
+19786,data/images/19786.jpg,Tshirts,Navy Blue,U.S. Polo Assn. Men Solid Navy Blue Tshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Navy Blue.",a man standing in front of a white wall,A navy blue T-shirt.,A navy blue T-shirt.,
+12616,data/images/12616.jpg,Tshirts,Peach,Ed Hardy Men Printed Peach Tshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Peach.",a man standing in front of a wall wearing a shirt and tie,A peach T-shirt.,A peach T-shirt.,
+3122,data/images/3122.jpg,Tshirts,Brown,Inkfruit Men's Deployment Light Brown T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Brown.",a man with a beard standing in front of a wall,A brown T-shirt.,A brown T-shirt.,
+17245,data/images/17245.jpg,Tshirts,Yellow,U.S. Polo Assn. Men Stripes Yellow Polo Tshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Yellow.",a man standing in front of a wall holding a nintendo wii game controller,A yellow T-shirt.,A yellow T-shirt.,
+42554,data/images/42554.jpg,Kurtas,White,Mother Earth Women White & Black Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: White.",a woman standing in front of a white wall,A white kurta.,A white kurta.,
+11450,data/images/11450.jpg,Tshirts,Green,United Colors of Benetton Men Light Green Tshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a man standing in front of a green wall,A green T-shirt.,A green T-shirt.,
+38717,data/images/38717.jpg,Tunics,White,Global Desi Women White Tunic,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tunics.
+
+Known main color: White.",a woman in a blue dress standing in front of a wall,A white tunic.,A white tunic.,
+29829,data/images/29829.jpg,Shirts,Purple,Basics Men Purple Checked Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Purple.",a man standing in front of a white wall,A purple shirt.,A purple shirt.,
+4061,data/images/4061.jpg,Tshirts,Yellow,Myntra Men's Radio Head Yellow T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Yellow.",a man in a shirt and tie standing in front of a wall,A yellow T-shirt.,A yellow T-shirt.,
+20300,data/images/20300.jpg,Sweaters,Maroon,Jealous 21 Women Solid Maroon Sweater,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Sweaters.
+
+Known main color: Maroon.",a woman standing in front of a wall,A maroon sweater.,A maroon sweater.,
+19577,data/images/19577.jpg,Tops,Olive,United Colors of Benetton Women Solid Olive Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Olive.",a woman standing in front of a wall,A olive top.,A olive top.,
+3719,data/images/3719.jpg,Tshirts,White,Lee Men's White Brooklyn T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a young man is standing in front of a wall,A white T-shirt.,A white T-shirt.,
+5116,data/images/5116.jpg,Tshirts,Grey,Wrangler Women Folk Side Print Grey T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Grey.",a woman in a dress standing in front of a wall,A grey T-shirt.,A grey T-shirt.,
+4366,data/images/4366.jpg,Tshirts,Black,Pink Floyd Men's The Wall Black T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a man in a shirt and tie standing in front of a wall,A black T-shirt.,A black T-shirt.,
+25038,data/images/25038.jpg,Tshirts,Green,Nike Men Premierl Green T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a blue and white striped shirt and a blue and white striped shirt,A green striped T-shirt.,A green striped T-shirt.,
+19392,data/images/19392.jpg,Tshirts,Black,ADIDAS Men Solid Black Jersey,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a man standing in front of a wall,A black T-shirt.,A black T-shirt.,
+30625,data/images/30625.jpg,Tshirts,White,Nike Men Printed White T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a white shirt and a black and white striped tie,A white striped T-shirt.,A white striped T-shirt.,
+1763,data/images/1763.jpg,Tshirts,Pink,Lotto Women Cathy Pink T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Pink.",a woman standing in front of a white wall,A pink T-shirt.,A pink T-shirt.,
+42234,data/images/42234.jpg,Tops,Blue,Sepia Women Blue Printed Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Blue.",a woman standing in front of a blue wall,A blue top.,A blue top.,
+10453,data/images/10453.jpg,Tshirts,Yellow,Flying Machine Men Gloden Haze Yellow Tshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Yellow.",a young man standing in front of a wall,A yellow T-shirt.,A yellow T-shirt.,
+44864,data/images/44864.jpg,Tshirts,Blue,Puma Men Blue & White T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a man standing in front of a white wall,A blue T-shirt.,A blue T-shirt.,
+4086,data/images/4086.jpg,Tshirts,Navy Blue,Classic Polo Men's Navy With White Stripes T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Navy Blue.",a man standing in front of a white wall,A navy blue T-shirt.,A navy blue T-shirt.,
+10405,data/images/10405.jpg,Tops,Black,United Colors of Benetton Women Top Black Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Black.",a woman in a black dress standing in front of a wall,A black top.,A black top.,
+17171,data/images/17171.jpg,Shirts,Grey,U.S. Polo Assn. Men Checks Grey Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Grey.",a man standing in front of a white wall,A grey shirt.,A grey shirt.,
+2253,data/images/2253.jpg,Tshirts,Yellow,ADIDAS Men Crew Yellow T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Yellow.",a man standing in front of a white wall,A yellow T-shirt.,A yellow T-shirt.,
+4058,data/images/4058.jpg,Tshirts,White,Myntra Men's Drink N Drive White T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a man standing in front of a white wall,A white T-shirt.,A white T-shirt.,
+34353,data/images/34353.jpg,Tshirts,Blue,Myntra Men Blue Diet Extreme T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a young man standing in front of a wall,A blue T-shirt.,A blue T-shirt.,
+57189,data/images/57189.jpg,Tunics,Pink,Elle Women Pink Tunic,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tunics.
+
+Known main color: Pink.",a woman standing in front of a white wall,A pink tunic.,A pink tunic.,
+47005,data/images/47005.jpg,Kurtas,Lavender,Shree Women Lavender Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Lavender.",a woman in a pink dress standing in front of a wall,A lavender kurta.,A lavender kurta.,
+40141,data/images/40141.jpg,Tshirts,Blue,Gini and Jony Boys Core Blue T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a blue and white striped shirt on a blue and white striped shirt,A blue striped T-shirt.,A blue striped T-shirt.,
+3782,data/images/3782.jpg,Tshirts,Blue,Status Quo Men's Beach Sky Blue T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a man holding a banana in front of his face,A blue T-shirt.,A blue T-shirt.,
+54942,data/images/54942.jpg,Tshirts,Green,Do u speak green Men Green T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a man standing in front of a white wall,A green T-shirt.,A green T-shirt.,
+14911,data/images/14911.jpg,Tshirts,Red,Mr. Men Men Mr. Silly Red Tshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Red.",a man in a red shirt with a red tie,A red T-shirt.,A red T-shirt.,
+2554,data/images/2554.jpg,Tshirts,White,Domyos Women's Proteen White T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a woman standing in front of a white wall,A white T-shirt.,A white T-shirt.,
+11735,data/images/11735.jpg,Tshirts,Blue,Lee Men Stripes Blue T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a man standing in front of a white wall,A blue T-shirt.,A blue T-shirt.,
+5975,data/images/5975.jpg,Shirts,Black,Locomotive Men Black Maroon Purple Stripe Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Black.",a man in a red shirt is standing in front of a wall,A black shirt.,A black shirt.,
+30213,data/images/30213.jpg,Shirts,Grey,John Miller Men Grey Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Grey.",a man standing in front of a wall,A grey shirt.,A grey shirt.,
+11699,data/images/11699.jpg,Shirts,Blue,Lee Men Blue Check Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man standing in front of a white wall,A blue shirt.,A blue shirt.,
+11020,data/images/11020.jpg,Tshirts,Pink,Wrangler Women Pink Freedom Spirit T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Pink.",a woman standing in front of a white wall,A pink T-shirt.,A pink T-shirt.,
+25007,data/images/25007.jpg,Shirts,Grey,United Colors of Benetton Men Grey Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Grey.",a man in a suit and tie standing in front of a wall,A grey shirt.,A grey shirt.,
+19202,data/images/19202.jpg,Shirts,White,United Colors of Benetton Men Striped White Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man standing in front of a white wall,A white shirt.,A white shirt.,
+3681,data/images/3681.jpg,Tshirts,Brown,Inkfruit Men's Double Trouble Brown T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Brown.",a man standing in front of a wall holding a skateboard,A brown T-shirt.,A brown T-shirt.,
+44802,data/images/44802.jpg,Tshirts,Yellow,Spykar Women Yellow Printed T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Yellow.",a young woman standing in front of a white wall,A yellow T-shirt.,A yellow T-shirt.,
+7534,data/images/7534.jpg,Tshirts,White,Nike men's As Nike Spher White Orange T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a white shirt with a black bow tie,A white T-shirt.,A white T-shirt.,
+3420,data/images/3420.jpg,Tshirts,Black,Myntra Men's Chai Garam Black T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a man standing in front of a wall holding a frisbee,A black T-shirt.,A black T-shirt.,
+24377,data/images/24377.jpg,Kurtas,Green,Folklore Women Green  Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Green.",a woman in a green dress standing in front of a green wall,A green kurta.,A green kurta.,
+29286,data/images/29286.jpg,Shirts,White,Wrangler Men Adino Stripe White Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man standing in front of a white wall,A white shirt.,A white shirt.,
+19955,data/images/19955.jpg,Sweaters,Purple,United Colors Of Benetton Men Purple Sweater,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Sweaters.
+
+Known main color: Purple.",a man in a red shirt standing in front of a wall,A purple sweater.,A purple sweater.,
+19476,data/images/19476.jpg,Sweatshirts,Black,Quiksilver Men Black Casual Sweatshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Sweatshirts.
+
+Known main color: Black.",a woman standing in front of a wall,A black sweatshirt.,A black sweatshirt.,
+14300,data/images/14300.jpg,Tshirts,Blue,Classic Polo Men Printed pack of 3 Tshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",three men standing next to each other in front of a wall,A blue T-shirt.,A blue T-shirt.,
+39836,data/images/39836.jpg,Tops,Peach,Gini and Jony Girls Printed Peach Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Peach.",a painting of a woman holding a pink umbrella,A peach top.,A peach top.,
+17754,data/images/17754.jpg,Shirts,Purple,Highlander Men Check Purple Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Purple.",a man standing in front of a white wall,A purple shirt.,A purple shirt.,
+6991,data/images/6991.jpg,Tshirts,White,s.Oliver Men's Polo Grey Collar White T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a man standing in front of a white wall,A white T-shirt.,A white T-shirt.,
+35887,data/images/35887.jpg,Tshirts,Yellow,Jungle Book Boys Mowgali Yellow T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Yellow.",a girl in a pink shirt is playing a video game,A yellow T-shirt.,A yellow T-shirt.,
+20664,data/images/20664.jpg,Tshirts,Grey,Classic Polo Men Striped Grey Tshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Grey.",a man standing in front of a white wall,A grey T-shirt.,A grey T-shirt.,
+40258,data/images/40258.jpg,Shirts,White,Scullers Men White & Navy Blue Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man standing in front of a white wall,A white shirt.,A white shirt.,
+17545,data/images/17545.jpg,Shirts,Brown,Mark Taylor Men Brown & White Striped Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Brown.",a man in a suit and tie standing in front of a wall,A brown shirt.,A brown shirt.,
+7148,data/images/7148.jpg,Tops,Grey,Scullers For Her Women's Wow Knit Grey Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Grey.",a woman in a black dress standing in front of a wall,A grey top.,A grey top.,
+31311,data/images/31311.jpg,Kurtas,Green,W Women Green Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Green.",a girl in a pink dress standing in front of a white wall,A green kurta.,A green kurta.,
+2138,data/images/2138.jpg,Shirts,Green,Basics Men Green & Cream Slim Fit Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Green.",a man standing in front of a white wall,A green shirt.,A green shirt.,
+4096,data/images/4096.jpg,Tshirts,Black,Classic Polo Men's Black With Blue White Stripes T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a man standing in front of a white wall,A black T-shirt.,A black T-shirt.,
+13449,data/images/13449.jpg,Shirts,Black,United Colors of Benetton Women Solid Black Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Black.",a woman standing in front of a white wall,A black shirt.,A black shirt.,
+5822,data/images/5822.jpg,Tshirts,Purple,ADIDAS Men's Prt Purple T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Purple.",a young man standing in front of a wall,A purple T-shirt.,A purple T-shirt.,
+12259,data/images/12259.jpg,Shirts,Grey,Genesis Grey Formal Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Grey.",a man in a suit and tie standing in front of a wall,A grey shirt.,A grey shirt.,
+16319,data/images/16319.jpg,Tshirts,Purple,Peter England Men Printed Purple TShirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Purple.",a man standing in front of a white wall,A purple T-shirt.,A purple T-shirt.,
+42653,data/images/42653.jpg,Kurtas,Black,Alma Women Black Printed Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Black.",a woman standing in front of a wall,A black kurta.,A black kurta.,
+42235,data/images/42235.jpg,Tops,Black,Sepia Women Black Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Black.",a woman in a black dress standing in front of a wall,A black top.,A black top.,
+12175,data/images/12175.jpg,Shirts,Blue,Basics Men Blue Slim Fit Checked Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man standing in front of a blue wall,A blue shirt.,A blue shirt.,
+33546,data/images/33546.jpg,Shirts,White,Wrangler Men Nimrod Oxford White Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man standing in front of a white wall,A white shirt.,A white shirt.,
+22017,data/images/22017.jpg,Kurtas,Pink,Vishudh Women Printed Pink Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Pink.",a woman in a pink dress standing in front of a wall,A pink kurta.,A pink kurta.,
+28743,data/images/28743.jpg,Kurtis,Green,W Women Printed Green Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtis.
+
+Known main color: Green.",a woman standing in front of a blue wall,A green kurti.,A green kurti.,
+18898,data/images/18898.jpg,Shirts,White,Arrow Woman Solid White Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a woman in a white dress standing in front of a white wall,A white shirt.,A white shirt.,
+18287,data/images/18287.jpg,Kurtas,Multi,Aneri Women Avani Multi Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Multi.",a woman standing in front of a wall,A multi kurta.,A multi kurta.,
+9464,data/images/9464.jpg,Shirts,White,John Miller Men  White Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man in a suit and tie standing in front of a wall,A white shirt.,A white shirt.,
+18938,data/images/18938.jpg,Tshirts,Purple,Levi's Men Graphic Print Purple Tshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Purple.",a man standing in front of a wall,A purple T-shirt.,A purple T-shirt.,
+16320,data/images/16320.jpg,Tshirts,Green,Peter England Men Printed Green TShirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a man standing in front of a green wall,A green T-shirt.,A green T-shirt.,
+13329,data/images/13329.jpg,Shirts,White,Gini and Jony Kids Boys Printed White Tshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a white dress shirt and white pants on a white wall,A white shirt.,A white shirt.,
+17718,data/images/17718.jpg,Shirts,Red,Reid & Taylor Men Check Red Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Red.",a blue and white striped tie sitting on top of a dresser,A red striped shirt.,A red striped shirt.,
+39183,data/images/39183.jpg,Kurtas,Multi,Aneri Women Multi Coloured Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Multi.",a woman in a dress standing in front of a wall,A multi kurta.,A multi kurta.,
+10346,data/images/10346.jpg,Tshirts,Purple,United Colors of Benetton Women Printed Purple Tshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Purple.",a woman in a pink dress standing in front of a wall,A purple T-shirt.,A purple T-shirt.,
+2844,data/images/2844.jpg,Tshirts,Navy Blue,Mr.Men Men's Mr.Busy Navy T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Navy Blue.",a man standing in front of a white wall,A navy blue T-shirt.,A navy blue T-shirt.,
+23448,data/images/23448.jpg,Tunics,Multi,Satya Paul Women Multi Coloured Printed Tunic,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tunics.
+
+Known main color: Multi.",a woman in a dress standing in front of a wall,A multi tunic.,A multi tunic.,
+4722,data/images/4722.jpg,Tshirts,Purple,Disney Kids Girl's Jeans Purple Teen Kidswear,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Purple.",a blue and white photo of a black and white polka dot,A purple polka T-shirt.,A purple polka T-shirt.,
+5498,data/images/5498.jpg,Tshirts,White,Mr.Men Men's Mr.happy White T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a man standing in front of a white wall,A white T-shirt.,A white T-shirt.,
+28834,data/images/28834.jpg,Kurtas,Multi,Biba Women Printed Multi Coloured Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Multi.",a woman in a pink dress standing in front of a wall,A multi kurta.,A multi kurta.,
+50344,data/images/50344.jpg,Kurtas,Black,Aurelia Women Black Printed Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Black.",a woman standing in front of a white wall,A black kurta.,A black kurta.,
+23218,data/images/23218.jpg,Kurtas,Black,Aneri Women Pride Black Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Black.",a woman in a red dress standing in front of a wall,A black kurta.,A black kurta.,
+23177,data/images/23177.jpg,Tshirts,Black,Mark Taylor Men Black Printed T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a young man standing in front of a wall,A black T-shirt.,A black T-shirt.,
+22056,data/images/22056.jpg,Kurtas,Blue,Vishudh Women Printed Blue Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Blue.",a woman in a pink dress standing in front of a wall,A blue kurta.,A blue kurta.,
+32414,data/images/32414.jpg,Tshirts,White,ADIDAS Men Comic White T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a man standing in front of a white wall,A white T-shirt.,A white T-shirt.,
+6683,data/images/6683.jpg,Tshirts,Black,UCB Men's Shiny Print Patch Black T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a young man is posing for a picture in a black and white photo,A black T-shirt.,A black T-shirt.,
+18850,data/images/18850.jpg,Tshirts,Yellow,Puma Men Head Yellow Tshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Yellow.",a young man standing in front of a wall,A yellow T-shirt.,A yellow T-shirt.,
+11013,data/images/11013.jpg,Tops,Multi,Wrangler Women Frill Check Multi Tops,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Multi.",a woman in a pink dress standing in front of a wall,A multi top.,A multi top.,
+13094,data/images/13094.jpg,Sweaters,Grey,ADIDAS Men Badge P/O Grey Sweaters,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Sweaters.
+
+Known main color: Grey.",a man is standing in front of a wall,A grey sweater.,A grey sweater.,
+13928,data/images/13928.jpg,Tops,Pink,United Colors of Benetton Women Solid Pink Tops,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Pink.",a woman in a pink dress standing in front of a wall,A pink top.,A pink top.,
+13999,data/images/13999.jpg,Sweatshirts,Black,Nike Men Solid Black Jackets,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Sweatshirts.
+
+Known main color: Black.",a person standing in front of a white wall,A black sweatshirt.,A black sweatshirt.,
+38327,data/images/38327.jpg,Tops,Blue,Hannah Montana Girls Blue Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Blue.",a blue and white photo of a blue and white frisbee,A blue top.,A blue top.,
+20349,data/images/20349.jpg,Tunics,Black,Scullers For Her Women Solid Black Tunic,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tunics.
+
+Known main color: Black.",a woman in a dress standing in front of a wall,A black tunic.,A black tunic.,
+37794,data/images/37794.jpg,Shirts,Brown,John Players Men Stripes Brown Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Brown.",a man standing in front of a white wall,A brown shirt.,A brown shirt.,
+34027,data/images/34027.jpg,Tshirts,White,Gini and Jony Boys Printed White T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a white shirt and a black and white striped shirt,A white striped T-shirt.,A white striped T-shirt.,
+31596,data/images/31596.jpg,Tshirts,Black,Mark Taylor Men Printed Black T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a man with a beard standing in front of a wall,A black T-shirt.,A black T-shirt.,
+39783,data/images/39783.jpg,Shirts,Red,Peter England Men Maroon Formal Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Red.",a man standing in front of a white wall,A red shirt.,A red shirt.,
+13519,data/images/13519.jpg,Sweatshirts,White,Spykar Men Stripes White Sweatshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Sweatshirts.
+
+Known main color: White.",a man standing in front of a white wall,A white sweatshirt.,A white sweatshirt.,
+31248,data/images/31248.jpg,Tshirts,Red,Puma Men Red Polo T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Red.",a man standing in front of a white wall,A red T-shirt.,A red T-shirt.,
+59358,data/images/59358.jpg,Kurtas,Purple,Vishudh Women Purple Printed Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Purple.",a woman in a pink dress standing in front of a wall,A purple kurta.,A purple kurta.,
+22068,data/images/22068.jpg,Kurtas,Grey,Vishudh Women Printed Grey Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Grey.",a young woman in a black dress holding a skateboard,A grey kurta.,A grey kurta.,
+24303,data/images/24303.jpg,Sweatshirts,Charcoal,ADIDAS Men Printed Charcoal Sweatshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Sweatshirts.
+
+Known main color: Charcoal.",a man standing in front of a wall,A charcoal sweatshirt.,A charcoal sweatshirt.,
+42559,data/images/42559.jpg,Kurtas,Multi,Mother Earth Women Multi Coloured Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Multi.",a woman in a red dress with a bow tie,A multi kurta.,A multi kurta.,
+14993,data/images/14993.jpg,Sweaters,Grey,ADIDAS Men Stripes Grey Sweaters,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Sweaters.
+
+Known main color: Grey.",a man standing in front of a blue wall,A grey sweater.,A grey sweater.,
+54146,data/images/54146.jpg,Tops,Black,Femella Women Black Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Black.",a woman standing in front of a wall holding a pink purse,A black top.,A black top.,
+3282,data/images/3282.jpg,Tshirts,Purple,Guerrilla Men's Army Of God Purple T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Purple.",a young man standing in front of a white wall,A purple T-shirt.,A purple T-shirt.,
+17161,data/images/17161.jpg,Shirts,Purple,U.S. Polo Assn. Men Checks Purple Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Purple.",a man in a suit and tie standing in front of a wall,A purple shirt.,A purple shirt.,
+19834,data/images/19834.jpg,Shirts,Blue,U.S. Polo Assn. Men Blue Checked Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man standing in front of a wall wearing a tie,A blue shirt.,A blue shirt.,
+16363,data/images/16363.jpg,Shirts,Blue,Peter England Men Check Blue Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man standing in front of a white wall,A blue shirt.,A blue shirt.,
+3085,data/images/3085.jpg,Tshirts,Yellow,Probase Men's Standing Out Yellow T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Yellow.",a young man is standing in front of a wall,A yellow T-shirt.,A yellow T-shirt.,
+37158,data/images/37158.jpg,Tops,Blue,United Colors of Benetton Women Blue Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Blue.",a woman standing in front of a blue wall,A blue top.,A blue top.,
+32640,data/images/32640.jpg,Tshirts,White,Nike Men Striped White & Black T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a white and black striped shirt and a white and black striped shirt,A white striped T-shirt.,A white striped T-shirt.,
+1807,data/images/1807.jpg,Tshirts,Red,Quechua Men G1 Techfresh Red T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Red.",a man standing in front of a wall wearing a red shirt,A red T-shirt.,A red T-shirt.,
+14018,data/images/14018.jpg,Tshirts,Grey,Nike Men Stripes Grey Polo Tshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Grey.",a black and white photo of a man in a blue shirt,A grey T-shirt.,A grey T-shirt.,
+33016,data/images/33016.jpg,Kurtas,Black,Mother Earth Women Striped Black & Maroon Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Black.",a woman in a dress standing in front of a wall,A black kurta.,A black kurta.,
+3479,data/images/3479.jpg,Tshirts,Black,ADIDAS Men's Black Graphic T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a man in a black shirt and tie standing in front of a wall,A black T-shirt.,A black T-shirt.,
+15187,data/images/15187.jpg,Tshirts,White,Arrow Sport Men Solid White Polo Tshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a man with a tie standing in front of a wall,A white T-shirt.,A white T-shirt.,
+46382,data/images/46382.jpg,Tshirts,Blue,ADIDAS Men Blue Printed T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a man in a blue shirt and tie standing in front of a wall,A blue T-shirt.,A blue T-shirt.,
+28938,data/images/28938.jpg,Kurtas,Blue,BIBA Women Printed Blue Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Blue.",a woman in a pink dress standing in front of a wall,A blue kurta.,A blue kurta.,
+13508,data/images/13508.jpg,Tshirts,Grey,Chimp Men Who's your papaji Grey Tshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Grey.",a young man standing in front of a wall,A grey T-shirt.,A grey T-shirt.,
+12910,data/images/12910.jpg,Shirts,Blue,Spykar Men Mandarin Collar Blue Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man in a suit and tie standing in front of a wall,A blue shirt.,A blue shirt.,
+8879,data/images/8879.jpg,Shirts,White,Regent Polo Club Men White Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man standing in front of a white wall,A white shirt.,A white shirt.,
+41748,data/images/41748.jpg,Tshirts,Green,Doodle Boys Stripes Green T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirtless shirt,A green T-shirt.,A green T-shirt.,
+34317,data/images/34317.jpg,Tshirts,Red,Myntra Men Red Freedom Warior T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Red.",a man standing in front of a wall wearing a red shirt,A red T-shirt.,A red T-shirt.,
+6493,data/images/6493.jpg,Tshirts,Blue,ADIDAS Men's Fresh Blue T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a man standing in front of a wall with a blue shirt,A blue T-shirt.,A blue T-shirt.,
+57184,data/images/57184.jpg,Tunics,Pink,Elle Women Pink Tunic,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tunics.
+
+Known main color: Pink.",a woman in a pink dress standing in front of a pink wall,A pink tunic.,A pink tunic.,
+33572,data/images/33572.jpg,Tshirts,Red,Wrangler Men Broad Striped Polo Red T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Red.",a man in a red shirt standing in front of a wall,A red T-shirt.,A red T-shirt.,
+34292,data/images/34292.jpg,Dupatta,Multi,Fabindia Women Multi Coloured Chanderi Dupatta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Dupatta.
+
+Known main color: Multi.",a woman standing in front of a white wall,A multi dupatta.,A multi dupatta.,
+29633,data/images/29633.jpg,Shirts,Black,Indigo Nation Men Striped Black Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Black.",a man standing in front of a white wall,A black shirt.,A black shirt.,
+18282,data/images/18282.jpg,Kurtas,Multi,Aneri Women N.Masti Multi Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Multi.",a woman dressed in a costume standing in front of a wall,A multi kurta.,A multi kurta.,
+45954,data/images/45954.jpg,Tops,Yellow,Tokyo Talkies Women Yellow Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Yellow.",a woman standing in front of a white wall,A yellow top.,A yellow top.,
+13799,data/images/13799.jpg,Sweaters,Purple,Proline Purple Striped Sweater,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Sweaters.
+
+Known main color: Purple.",a man standing in front of a wall,A purple sweater.,A purple sweater.,
+16030,data/images/16030.jpg,Shirts,Grey,Highlander Men Check Grey Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Grey.",a man standing in front of a white wall,A grey shirt.,A grey shirt.,
+5024,data/images/5024.jpg,Shirts,White,Levis Kids Boy's Caspian White Kidswear,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a white and black striped shirt with a white bow tie,a white and black striped shirt with a white bow tie,a white and black striped shirt with a white bow tie,
+53801,data/images/53801.jpg,Tshirts,Green,Puma Men Green T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a man in a green shirt is talking on a cell phone,A green T-shirt.,A green T-shirt.,
+43544,data/images/43544.jpg,Shirts,Blue,Scullers Men Checked Blue Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man standing in front of a white wall,A blue shirt.,A blue shirt.,
+28475,data/images/28475.jpg,Kurtas,Blue,Urban Yoga Women Printed Blue Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Blue.",a woman standing in front of a white wall,A blue kurta.,A blue kurta.,
+59919,data/images/59919.jpg,Kurtas,Multi,Diva Women Multi Colour Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Multi.",a woman in a dress standing in front of a wall,A multi kurta.,A multi kurta.,
+11369,data/images/11369.jpg,Tops,Pink,United Colors Of Benetton Women Light Winter Pink Tops,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Pink.",a woman standing in front of a wall,A pink top.,A pink top.,
+10030,data/images/10030.jpg,Tshirts,Black,Nike Women As See The Win Black T-Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a black and white photo of a black and white shirt,A black T-shirt.,A black T-shirt.,
+58511,data/images/58511.jpg,Shirts,White,Tonga Women White Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a woman standing in front of a white wall,A white shirt.,A white shirt.,
+47017,data/images/47017.jpg,Kurtas,Red,Shree Women Red Chevron Stripe Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Red.",a woman in a pink dress standing in front of a wall,A red kurta.,A red kurta.,
+24514,data/images/24514.jpg,Kurtas,Black,Mother Earth Women Black Printed Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Black.",a woman is standing in front of a wall,A black kurta.,A black kurta.,
+26876,data/images/26876.jpg,Tops,White,Jealous 21 Women White Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: White.",a woman standing in a black and white photo,A white top.,A white top.,
+23331,data/images/23331.jpg,Kurtas,Brown,W Women Brown Printed Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Brown.",a woman standing in front of a wall,A brown kurta.,A brown kurta.,
+17279,data/images/17279.jpg,Tshirts,Navy Blue,U.S. Polo Assn. Men Printed Navy Blue Tshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Navy Blue.",a young man standing in front of a wall,A navy blue T-shirt.,A navy blue T-shirt.,
+46017,data/images/46017.jpg,Kurtas,Orange,Fabindia Women Orange Printed Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Orange.",a woman in a red dress standing in front of a wall,A orange kurta.,A orange kurta.,
+9677,data/images/9677.jpg,Tshirts,Green,ADIDAS Men  Green  Tshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a man standing in front of a wall wearing a white shirt and black pants,A green T-shirt.,A green T-shirt.,
+21596,data/images/21596.jpg,Shirts,Grey,United Colors of Benetton Men Stripes Grey Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Grey.",a man standing in front of a white wall,A grey shirt.,A grey shirt.,
+38942,data/images/38942.jpg,Shirts,White,Gini and Jony Boys Check White Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a pink umbrella sitting on top of a dresser,A white shirt.,A white shirt.,
+21168,data/images/21168.jpg,Tops,Blue,s.Oliver Women Check Blue Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Blue.",a woman wearing a blue shirt and blue pants,A blue top.,A blue top.,
+8788,data/images/8788.jpg,Shirts,White,Indigo Nation Men Price catch Red White Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man in a suit and tie standing in front of a wall,A white shirt.,A white shirt.,
+43576,data/images/43576.jpg,Tops,White,Gini and Jony Girls Knits White Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: White.",a white white and black white and a white and black white and black white and black white and black white and black white and black white and black white and black white and black white and black white and black white and black white and black white and black white and black white and black white and black white,A white top.,A white top.,
+30312,data/images/30312.jpg,Tshirts,Red,Myntra Men Viva Las Vegas Red T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Red.",a man standing in front of a wall wearing a red shirt,A red T-shirt.,A red T-shirt.,
+33021,data/images/33021.jpg,Kurtas,Cream,Mother Earth Women Printed Cream Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Cream.",a woman standing in front of a wall wearing a costume,A cream kurta.,A cream kurta.,
+29024,data/images/29024.jpg,Tshirts,Navy Blue,ADIDAS Men Messi Navy Blue T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Navy Blue.",a man standing in front of a wall with a blue shirt,A navy blue T-shirt.,A navy blue T-shirt.,
+9257,data/images/9257.jpg,Shirts,Blue,Mark Taylor Men Blue Striped Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man in a suit and tie standing in front of a wall,A blue shirt.,A blue shirt.,
+13728,data/images/13728.jpg,Shirts,Grey,Belmonte Men Stripes Grey Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Grey.",a man standing in front of a white wall,A grey shirt.,A grey shirt.,
+20111,data/images/20111.jpg,Kurtas,White,Diva Women Printed White Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: White.",a woman in a dress standing in front of a wall,A white kurta.,A white kurta.,
+8448,data/images/8448.jpg,Tops,Grey,Jealous 21 Women about my style Purple Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Grey.",a woman standing in front of a white wall,A grey top.,A grey top.,
+7453,data/images/7453.jpg,Tshirts,Multi,Proline Men Multicolured Striped Polo T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Multi.",a man standing in front of a wall holding a skateboard,A multi T-shirt.,A multi T-shirt.,
+10475,data/images/10475.jpg,Shirts,Brown,Flying Machine Men FS Solid Brown Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Brown.",a man standing in front of a wall,A brown shirt.,A brown shirt.,
+1880,data/images/1880.jpg,Tshirts,Black,FIFA Mens World Cup Champions Black T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a man standing in front of a white wall,A black T-shirt.,A black T-shirt.,
+26419,data/images/26419.jpg,Shirts,Green,Turtle Men Check Green Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Green.",a man standing in front of a white wall,A green shirt.,A green shirt.,
+34941,data/images/34941.jpg,Dupatta,Off White,Fabindia Off White Chanderi Dupatta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Dupatta.
+
+Known main color: Off White.",a woman in a dress standing in front of a wall,A off white dupatta.,A off white dupatta.,
+37740,data/images/37740.jpg,Shirts,Navy Blue,John Players Men Check Navy Blue Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Navy Blue.",a man standing in front of a white wall,A navy blue shirt.,A navy blue shirt.,
+26415,data/images/26415.jpg,Shirts,Purple,Turtle Men Check Purple Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Purple.",a man standing in front of a wall,A purple shirt.,A purple shirt.,
+7954,data/images/7954.jpg,Tshirts,Blue,Puma Men's Knit Polo Mazarine Blue Polo T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a man standing in front of a white wall,A blue T-shirt.,A blue T-shirt.,
+5951,data/images/5951.jpg,Shirts,Blue,Locomotive Men Blue Checked Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man standing in front of a white wall,A blue shirt.,A blue shirt.,
+10409,data/images/10409.jpg,Tshirts,Green,United Colors of Benetton Men Green Polo Tshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a man standing in front of a green wall,A green T-shirt.,A green T-shirt.,
+10810,data/images/10810.jpg,Shirts,Blue,Wrangler Men Mark Rodeo Riveted Blue Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man standing in front of a white wall,A blue shirt.,A blue shirt.,
+30785,data/images/30785.jpg,Kurtas,Blue,Fabindia Men Printed Blue Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Blue.",a man standing in front of a wall,A blue kurta.,A blue kurta.,
+46810,data/images/46810.jpg,Tshirts,Yellow,Nike Women Yellow T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Yellow.",a close up picture of a green and white checkered shirt,A yellow T-shirt.,A yellow T-shirt.,
+39785,data/images/39785.jpg,Shirts,Blue,Peter England Men Navy Blue Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man standing in front of a white wall,A blue shirt.,A blue shirt.,
+21402,data/images/21402.jpg,Tshirts,White,Locomotive Men Printed White Tshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a young man standing in front of a wall,A white T-shirt.,A white T-shirt.,
+20367,data/images/20367.jpg,Tshirts,Navy Blue,United Colors of Benetton Men Navy Blue T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Navy Blue.",a man standing in front of a white wall,A navy blue T-shirt.,A navy blue T-shirt.,
+6618,data/images/6618.jpg,Shirts,Purple,Spykar Men Purple and white Check Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Purple.",a man in a red shirt talking on a cell phone,A purple shirt.,A purple shirt.,
+52050,data/images/52050.jpg,Tshirts,Green,Myntra Men Green T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a man is talking on his cell phone,A green T-shirt.,A green T-shirt.,
+8383,data/images/8383.jpg,Tshirts,Blue,Doodle Girl's Raw Edges Light Blue Teen Kidswear,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a blue and white photo of a blue and white skateboard,A blue T-shirt.,A blue T-shirt.,
+17713,data/images/17713.jpg,Shirts,Blue,Reid & Taylor Men Check Blue Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a close up picture of a white shirt and a blue tie,a close up picture of a white shirt and a blue tie,a close up picture of a white shirt and a blue tie,
+4249,data/images/4249.jpg,Tshirts,Brown,Probase Men's Mirror On The Brown T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Brown.",a man standing in front of a wall holding a frisbee,A brown T-shirt.,A brown T-shirt.,
+12029,data/images/12029.jpg,Shirts,Grey,Mark Taylor Men Grey Striped Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Grey.",a man in a suit and tie standing in front of a wall,A grey shirt.,A grey shirt.,
+36830,data/images/36830.jpg,Kurtas,Purple,Vishudh Women Purple Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Purple.",a woman standing in front of a white wall,A purple kurta.,A purple kurta.,
+54553,data/images/54553.jpg,Kurtas,Black,Global Desi Women Black Printed Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Black.",a woman dressed in a costume standing in front of a wall,A black kurta.,A black kurta.,
+19995,data/images/19995.jpg,Tshirts,Black,United Colors of Benetton Men Printed Black TShirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a man standing in front of a white wall,A black T-shirt.,A black T-shirt.,
+40409,data/images/40409.jpg,Tops,Black,Tonga Women Black & Cream-Coloured Striped Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Black.",a woman in a pink dress posing for a picture,A black top.,A black top.,
+53775,data/images/53775.jpg,Tshirts,Red,Puma Men Soft Red T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Red.",a man in a red shirt standing in front of a white wall,A red T-shirt.,A red T-shirt.,
+19799,data/images/19799.jpg,Tshirts,Maroon,U.S. Polo Assn. Men Solid Maroon T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Maroon.",a man standing in front of a white wall,A maroon T-shirt.,A maroon T-shirt.,
+24062,data/images/24062.jpg,Tshirts,Navy Blue,Locomotive Men Navy Blue Printed T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Navy Blue.",a young man standing in front of a wall,A navy blue T-shirt.,A navy blue T-shirt.,
+32470,data/images/32470.jpg,Tshirts,Blue,ADIDAS Women Blue T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a woman standing in front of a blue wall,A blue T-shirt.,A blue T-shirt.,
+14583,data/images/14583.jpg,Tops,Grey,United Colors of Benetton Women Solid Grey Tops,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Grey.",a woman standing in front of a wall,A grey top.,A grey top.,
+12936,data/images/12936.jpg,Shirts,White,Basics Men White Slim Fit Checked Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man in a blue shirt and tie standing in front of a wall,A white shirt.,A white shirt.,
+11161,data/images/11161.jpg,Shirts,Black,John Miller Men Solid Black Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Black.",a man standing in front of a wall,A black shirt.,A black shirt.,
+4206,data/images/4206.jpg,Tshirts,Red,Disney Kids Boy's Red Mickeys Scrap Book Kidswear,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Red.",a red and white teddy bear sitting on top of a red blanket,A red T-shirt.,A red T-shirt.,
+40039,data/images/40039.jpg,Tshirts,White,ADIDAS Men White T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a young man standing in front of a wall,A white T-shirt.,A white T-shirt.,
+23133,data/images/23133.jpg,Tshirts,Grey,Chhota Bheem Kids Boys Lets Rock Grey T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Grey.",a vintage photo of a mannequin in a dress shirt,A grey T-shirt.,A grey T-shirt.,
+58498,data/images/58498.jpg,Tops,White,Tonga Women Printed White Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: White.",a woman standing in front of a white wall,A white top.,A white top.,
+16644,data/images/16644.jpg,Tshirts,Orange,Facit Men Smart Orange Tshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Orange.",a man is standing in front of a wall,A orange T-shirt.,A orange T-shirt.,
+33316,data/images/33316.jpg,Shirts,Grey,Arrow New York Men Grey Striped Slim Fit Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Grey.",a man standing in front of a white wall,A grey shirt.,A grey shirt.,
+8390,data/images/8390.jpg,Tshirts,Navy Blue,ADIDAS Men Ess 3s F Tee Navy Blue T-Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Navy Blue.",a man standing in front of a white wall,A navy blue T-shirt.,A navy blue T-shirt.,
+18978,data/images/18978.jpg,Jackets,White,ADIDAS Originals Men CR WB PS White Jacket,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Jackets.
+
+Known main color: White.",a young man wearing a hat and holding a baseball bat,A white jacket.,A white jacket.,
+38557,data/images/38557.jpg,Tshirts,Blue,Nike Men Polo Club Blue T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a blue and white striped shirt and a blue and white striped shirt,A blue striped T-shirt.,A blue striped T-shirt.,
+9803,data/images/9803.jpg,Tunics,Navy Blue,Scullers For Her Women Scullers Top Navy Blue Tops,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tunics.
+
+Known main color: Navy Blue.",a woman standing in front of a white wall,A navy blue tunic.,A navy blue tunic.,
+19078,data/images/19078.jpg,Kurtas,Off White,W Women Floral Print Off White Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Off White.",a woman in a dress standing next to a wall,A off white kurta.,A off white kurta.,
+28713,data/images/28713.jpg,Kurtas,White,W Women Printed White Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: White.",a woman standing in front of a wall,A white kurta.,A white kurta.,
+31358,data/images/31358.jpg,Tshirts,Brown,Locomotive Brown Printed T-Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Brown.",a man standing in front of a wall,A brown T-shirt.,A brown T-shirt.,
+21133,data/images/21133.jpg,Tops,Purple,s.Oliver Women Striped Purple Tshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Purple.",a woman standing in front of a white wall,A purple top.,A purple top.,
+12471,data/images/12471.jpg,Shirts,White,Basics Men White Slim Fit Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man standing in front of a white wall,A white shirt.,A white shirt.,
+5802,data/images/5802.jpg,Tshirts,Blue,ADIDAS Men's Prt Blue T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a man standing in front of a wall holding a frisbee,A blue T-shirt.,A blue T-shirt.,
+14091,data/images/14091.jpg,Sweaters,Peach,Flying Machine Women Solid Peach Sweaters,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Sweaters.
+
+Known main color: Peach.",a woman standing in front of a wall,A peach sweater.,A peach sweater.,
+46396,data/images/46396.jpg,Shirts,Blue,ADIDAS Men Blue & Black Check Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man standing in front of a wall talking on a cell phone,A blue shirt.,A blue shirt.,
+22596,data/images/22596.jpg,Tshirts,Red,Nike Men Red T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Red.",a red and white striped shirt with a red bow tie,A red striped T-shirt.,A red striped T-shirt.,
+23187,data/images/23187.jpg,Shirts,Black,Black Coffee Men Black Striped Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Black.",a man in a suit and tie standing in front of a wall,A black shirt.,A black shirt.,
+9650,data/images/9650.jpg,Shirts,Purple,Indigo Nation Men Club Satin Purple Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Purple.",a man standing in front of a white wall,A purple shirt.,A purple shirt.,
+22639,data/images/22639.jpg,Tshirts,Orange,Nike Men Printed Orange T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Orange.",a man wearing a red shirt and a blue tie,A orange T-shirt.,A orange T-shirt.,
+17289,data/images/17289.jpg,Tshirts,Green,U.S. Polo Assn. Men Solid Green Polo Tshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a man standing in front of a white wall,A green T-shirt.,A green T-shirt.,
+23874,data/images/23874.jpg,Tshirts,Green,ADIDAS Men Green T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a man standing in front of a white wall,A green T-shirt.,A green T-shirt.,
+5984,data/images/5984.jpg,Shirts,Red,Locomotive Men Red Checked Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Red.",a man standing in front of a wall with a striped shirt,A red striped shirt.,A red striped shirt.,
+4355,data/images/4355.jpg,Tshirts,Grey,Batman Men's Batman Applique Shei Grey T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Grey.",a man standing in front of a wall wearing a shirt and tie,A grey T-shirt.,A grey T-shirt.,
+45964,data/images/45964.jpg,Tshirts,White,Tokyo Talkies Women White Printed T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a woman is standing in front of a wall holding a cell phone,A white T-shirt.,A white T-shirt.,
+39846,data/images/39846.jpg,Tops,Green,Gini And Jony Girls Striped Green Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Green.",a blue and white striped shirt and a blue and white striped tie,A green striped top.,A green striped top.,
+32643,data/images/32643.jpg,Tshirts,Orange,Nike Women Tennis Blockbuster Orange T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Orange.",a pink and white striped dress shirt and a pink and white striped dress shirt,A orange striped T-shirt.,A orange striped T-shirt.,
+29308,data/images/29308.jpg,Tshirts,Blue,Wrangler Men Bull Rider Blue T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a man standing in front of a white wall,A blue T-shirt.,A blue T-shirt.,
+56687,data/images/56687.jpg,Kurtas,Beige,Fabindia Men Beige Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Beige.",a man in a suit standing in front of a wall,A beige kurta.,A beige kurta.,
+36874,data/images/36874.jpg,Tshirts,White,Spykar Men Cult White T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a man standing in front of a wall,A white T-shirt.,A white T-shirt.,
+46244,data/images/46244.jpg,Tunics,Black,Fusion Beats Women Black & Red Tunic,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tunics.
+
+Known main color: Black.",a woman in a pink dress holding a pink skateboard,A black tunic.,A black tunic.,
+9502,data/images/9502.jpg,Shirts,Red,John Miller Men Cotton Blend Red Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Red.",a man standing in front of a white wall,A red shirt.,A red shirt.,
+12068,data/images/12068.jpg,Kurtas,White,W Women Printed White Kurtas,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: White.",a woman standing in front of a white wall,A white kurta.,A white kurta.,
+37185,data/images/37185.jpg,Tops,Lime Green,United Colors of Benetton Women Lime Green Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Lime Green.",a woman in a pink dress standing in front of a wall,A lime green top.,A lime green top.,
+53809,data/images/53809.jpg,Tunics,White,Ayaany Women White Tunic,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tunics.
+
+Known main color: White.",a woman in a dress standing in front of a wall,A white tunic.,A white tunic.,
+22398,data/images/22398.jpg,Shirts,White,Mark Taylor Men Striped White Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man in a suit and tie standing in front of a wall,A white shirt.,A white shirt.,
+22766,data/images/22766.jpg,Kurtas,Red,BIBA Women Solid Red Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Red.",a woman in a red dress standing in front of a wall,A red kurta.,A red kurta.,
+14639,data/images/14639.jpg,Shirts,White,Probase Men Classic Check White Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man standing in front of a white wall,A white shirt.,A white shirt.,
+4404,data/images/4404.jpg,Tshirts,Black,Nirvana Men's Guitar Image Discharge Black T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a man with a tie standing in front of a wall,A black T-shirt.,A black T-shirt.,
+28906,data/images/28906.jpg,Kurtas,Blue,BIBA Women Printed Blue Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Blue.",a woman in a pink dress standing in front of a wall,A blue kurta.,A blue kurta.,
+29184,data/images/29184.jpg,Shirts,Blue,United Colors of Benetton Men Blue Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man standing in front of a blue wall,A blue shirt.,A blue shirt.,
+34942,data/images/34942.jpg,Dupatta,Cream,Fabindia Printed Cream Cotton Silk Dupatta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Dupatta.
+
+Known main color: Cream.",a woman standing in front of a white wall,A cream dupatta.,A cream dupatta.,
+23643,data/images/23643.jpg,Tshirts,Grey,Music Men Grey Printed T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Grey.",a man standing in front of a wall holding a skateboard,A grey T-shirt.,A grey T-shirt.,
+53836,data/images/53836.jpg,Kurtas,White,Vishudh Women White and Green Printed Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: White.",a woman in a pink dress standing in front of a wall,A white kurta.,A white kurta.,
+40944,data/images/40944.jpg,Tops,Pink,Gini and Jony Girls Kitch Bright Pink Top,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tops.
+
+Known main color: Pink.",a close up picture of a red and white striped shirt,A pink striped top.,A pink striped top.,
+50357,data/images/50357.jpg,Kurtas,Mustard,Aurelia Women Mustard Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Mustard.",a woman in a dress standing in front of a wall,A mustard kurta.,A mustard kurta.,
+3361,data/images/3361.jpg,Tshirts,Black,Myntra Women Brain Black T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a young woman standing in front of a wall,A black T-shirt.,A black T-shirt.,
+57430,data/images/57430.jpg,Tshirts,Green,Angry Birds Women Green T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Green.",a woman standing in front of a wall with a pink shirt,A green T-shirt.,A green T-shirt.,
+4313,data/images/4313.jpg,Tshirts,Pink,Tantra Kid's Unisex Elephant Pink Kidswear,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Pink.",a pink dress shirt with a pink flower in it,A pink T-shirt.,A pink T-shirt.,
+18619,data/images/18619.jpg,Tshirts,White,Puma Men Team Essential Polo White Tshirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: White.",a man standing in front of a white wall,A white T-shirt.,A white T-shirt.,
+58654,data/images/58654.jpg,Kurtas,Red,ALayna Women Red Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Red.",a woman in a red dress standing in front of a wall,A red kurta.,A red kurta.,
+2046,data/images/2046.jpg,Tshirts,Blue,ADIDAS Mens Fitted Blue T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a man with a beard standing in front of a wall,A blue T-shirt.,A blue T-shirt.,
+20024,data/images/20024.jpg,Shirts,Red,United Colors of Benetton Men Check Red Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Red.",a man standing in front of a white wall,A red shirt.,A red shirt.,
+50346,data/images/50346.jpg,Kurtas,Pink,Aurelia Women Pink Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Pink.",a woman in a pink dress standing in front of a wall,A pink kurta.,A pink kurta.,
+7690,data/images/7690.jpg,Tshirts,Purple,Puma Men's Polo Purple T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Purple.",a man standing in front of a wall wearing a blue shirt,A purple T-shirt.,A purple T-shirt.,
+25026,data/images/25026.jpg,Tshirts,Blue,Nike Women Miler Blue Jersey,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a blue and white striped shirt and blue pants,A blue striped T-shirt.,A blue striped T-shirt.,
+31016,data/images/31016.jpg,Shirts,White,Arrow Men Striped White & Green Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man standing in front of a white wall,A white shirt.,A white shirt.,
+50329,data/images/50329.jpg,Kurtas,Teal,Aurelia Women Teal Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Teal.",a woman in a red dress standing in front of a wall,A teal kurta.,A teal kurta.,
+2001,data/images/2001.jpg,Tshirts,Grey,ADIDAS Mens Grey Polo T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Grey.",a man standing in front of a white wall,A grey T-shirt.,A grey T-shirt.,
+19733,data/images/19733.jpg,Shirts,Green,United Colors of Benetton Men Solid Green Shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Green.",a man standing in front of a white wall,A green shirt.,A green shirt.,
+14539,data/images/14539.jpg,Kurtis,Maroon,Vishudh Women Flower Print Maroon Kurtis,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtis.
+
+Known main color: Maroon.",a woman in a red dress standing in front of a wall,A maroon kurti.,A maroon kurti.,
+28629,data/images/28629.jpg,Tshirts,Black,Nike Men Sports Black Jersey,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a black and white photo of a white shirt,A black T-shirt.,A black T-shirt.,
+44880,data/images/44880.jpg,Tshirts,Black,Puma Men Black Jamaica Fun T-shirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Black.",a man standing in front of a wall holding a skateboard,A black T-shirt.,A black T-shirt.,
+42546,data/images/42546.jpg,Kurtas,Red,Mother Earth Women Red Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Red.",a woman in a pink dress standing in front of a wall,A red kurta.,A red kurta.,
+40051,data/images/40051.jpg,Jackets,Navy Blue,ADIDAS Men Navy Messi Track Jacket,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Jackets.
+
+Known main color: Navy Blue.",a young man in a blue shirt standing in front of a wall,A navy blue jacket.,A navy blue jacket.,
+13878,data/images/13878.jpg,Shirts,Red,Scullers Men Check Red Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Red.",a man standing in front of a white wall,A red shirt.,A red shirt.,
+13750,data/images/13750.jpg,Shirts,Blue,Belmonte Men Check Blue Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: Blue.",a man standing in front of a white wall,A blue shirt.,A blue shirt.,
+32225,data/images/32225.jpg,Kurtas,Red,Fabindia Women Red Striped Kurta,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Kurtas.
+
+Known main color: Red.",a woman in a red dress standing in front of a wall,A red kurta.,A red kurta.,
+15583,data/images/15583.jpg,Tshirts,Blue,Proline Men Solid Blue Polo Tshirt,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Tshirts.
+
+Known main color: Blue.",a man standing in front of a blue wall,A blue T-shirt.,A blue T-shirt.,
+9633,data/images/9633.jpg,Shirts,White,Indigo Nation Men Price catch Blue White Shirts,vit-gpt2,ecommerce_v1,"You are generating an e-commerce product description from a single product image.
+
+Rules:
+- Output 1-2 short sentences (max 25 words).
+- Mention: product type + main color. Mention pattern only if clearly visible.
+- Do NOT mention: brand, price, material, size, gender, background, people, emotions, marketing phrases.
+- Focus on the product only.
+
+Return ONLY the description text.
+
+Known product type: Shirts.
+
+Known main color: White.",a man standing in front of a white wall,A white shirt.,A white shirt.,

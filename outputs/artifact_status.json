@@ -1,0 +1,39 @@
+{
+  "device": "cpu",
+  "sanity_rows": 20,
+  "eval_rows": 300,
+  "requested_models": [
+    "vit-gpt2",
+    "blip"
+  ],
+  "gpt_evaluated": false,
+  "gpt_note": "GPT excluded unless --include-gpt is passed and ENABLE_GPT_API=1 plus OPENAI_API_KEY are set.",
+  "sanity_availability": {
+    "vit-gpt2": {
+      "rows": 20,
+      "ok_rows": 20,
+      "available": true,
+      "first_error": ""
+    },
+    "blip": {
+      "rows": 20,
+      "ok_rows": 20,
+      "available": true,
+      "first_error": ""
+    }
+  },
+  "eval_availability": {
+    "vit-gpt2": {
+      "rows": 300,
+      "ok_rows": 300,
+      "available": true,
+      "first_error": ""
+    },
+    "blip": {
+      "rows": 300,
+      "ok_rows": 300,
+      "available": true,
+      "first_error": ""
+    }
+  }
+}
