@@ -13,6 +13,7 @@ from fashion_caption.generation.openai_api import (
     OpenAIConfigurationError,
     OpenAIGenerationError,
     OpenAIResponsesClient,
+    gpt_feature_enabled,
     openai_key_configured,
 )
 from fashion_caption.postprocess.text import clean_description
@@ -324,7 +325,7 @@ class ModelRegistry:
 
     @staticmethod
     def gpt_configured() -> bool:
-        return openai_key_configured()
+        return gpt_feature_enabled() and openai_key_configured()
 
     def get(self, model_id: str, params: Optional[Dict[str, Any]] = None):
         params = params or {}

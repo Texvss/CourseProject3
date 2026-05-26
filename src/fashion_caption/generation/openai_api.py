@@ -28,6 +28,10 @@ def openai_key_configured() -> bool:
     return bool(os.environ.get("OPENAI_API_KEY", "").strip())
 
 
+def gpt_feature_enabled() -> bool:
+    return os.environ.get("ENABLE_GPT_API", "").strip() == "1"
+
+
 def image_to_data_url(image: Image.Image) -> str:
     buffer = io.BytesIO()
     image.convert("RGB").save(buffer, format="PNG")
@@ -68,6 +72,8 @@ class OpenAIResponsesClient:
         max_output_tokens: int = 80,
         temperature: float = 0.2,
     ) -> Dict[str, Any]:
+        if not gpt_feature_enabled():
+            raise OpenAIConfigurationError("GPT generation is disabled. Set ENABLE_GPT_API=1 to enable it.")
         if not self.api_key:
             raise OpenAIConfigurationError(
                 "OPENAI_API_KEY is not configured. Add it to your environment before using GPT generation."

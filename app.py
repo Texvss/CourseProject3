@@ -29,7 +29,7 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from fashion_caption.generation import ModelRegistry  # noqa: E402
-from fashion_caption.generation.openai_api import DEFAULT_OPENAI_MODEL  # noqa: E402
+from fashion_caption.generation.openai_api import DEFAULT_OPENAI_MODEL, gpt_feature_enabled, openai_key_configured  # noqa: E402
 from fashion_caption.generation.registry import OpenAIConfigurationError, OpenAIGenerationError  # noqa: E402
 from fashion_caption.prompts import ECOMMERCE_PROMPT_ID, get_prompt_config  # noqa: E402
 
@@ -42,7 +42,9 @@ REMOTE_MODEL_ID_DEFAULT = os.environ.get("FASHION_CAPTION_REMOTE_MODEL_ID", "Sal
 REMOTE_ADAPTER_PATH_DEFAULT = os.environ.get("FASHION_CAPTION_REMOTE_ADAPTER_PATH", "")
 OPENAI_MODEL_DEFAULT = os.environ.get("OPENAI_GPT_MODEL", DEFAULT_OPENAI_MODEL)
 
-MODEL_CHOICES = ["vit-gpt2", "blip", "blip2", "blip2-lora", "gpt"]
+MODEL_CHOICES = ["vit-gpt2", "blip", "blip2", "blip2-lora"]
+if REGISTRY.gpt_configured():
+    MODEL_CHOICES.append("gpt")
 
 PAGE_CSS = """
 :root {
@@ -287,7 +289,14 @@ def format_usage(usage: Dict[str, Any]) -> str:
 
 def gpt_tile_html(record: Optional[Dict[str, Any]] = None) -> str:
     configured = REGISTRY.gpt_configured()
-    status = build_status("ok", "OPENAI_API_KEY configured") if configured else build_status("bad", "OPENAI_API_KEY missing")
+    if configured:
+        status = build_status("ok", "GPT enabled")
+    elif not gpt_feature_enabled():
+        status = build_status("warn", "GPT disabled")
+    elif not openai_key_configured():
+        status = build_status("bad", "OPENAI_API_KEY missing")
+    else:
+        status = build_status("bad", "GPT unavailable")
     model = OPENAI_MODEL_DEFAULT
     details = f"<p>Default model: <strong>{model}</strong></p>"
     if record and record.get("model_id") == "gpt":
@@ -376,6 +385,10 @@ def generate_description(
             }
         )
     if model_id == "gpt":
+        if not REGISTRY.gpt_configured():
+            status = build_status("bad", "GPT is disabled. Set ENABLE_GPT_API=1 and OPENAI_API_KEY to enable it.")
+            choices = saved_run_choices(records)
+            return landing_html(), output_cards_html(records), gpt_tile_html(), gr.update(choices=choices, value=choices[0] if choices else None), status, "", records, image_path
         params.update({"openai_model": openai_model or OPENAI_MODEL_DEFAULT})
 
     try:

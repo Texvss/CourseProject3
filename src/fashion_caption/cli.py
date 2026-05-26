@@ -12,6 +12,7 @@ from fashion_caption.models import blip2
 from fashion_caption.visualization.sheets import make_results_sheet
 from fashion_caption.eval.metrics import ensure_nltk, bleu1
 from fashion_caption.eval.batch import export_generation_csv
+from fashion_caption.generation.registry import ModelRegistry
 from fashion_caption.postprocess.text import clean_description
 
 
@@ -46,6 +47,7 @@ def parse_args(argv=None) -> argparse.Namespace:
     parser.add_argument("--export-n", type=int, default=None, help="Optional row count for the batch export.")
     parser.add_argument("--prompt-id", default="ecommerce_v1", help="Prompt template id for generation export.")
     parser.add_argument("--include-metrics", action="store_true", help="Include optional BLEU-1 in export metrics.")
+    parser.add_argument("--include-gpt", action="store_true", help="Allow GPT in batch export when explicitly configured.")
     parser.add_argument("--remote-url", default=None, help="Optional remote BLIP-2 /caption endpoint for batch export.")
     return parser.parse_args(argv)
 
@@ -70,6 +72,9 @@ def run(args: argparse.Namespace) -> None:
     if args.export_generation_csv:
         export_df = df_sanity.iloc[: args.export_n].copy() if args.export_n else df_sanity
         export_models = [item.strip() for item in args.export_models.split(",") if item.strip()]
+        export_models = [
+            model for model in export_models if model != "gpt" or (args.include_gpt and ModelRegistry.gpt_configured())
+        ]
         metrics = export_generation_csv(
             df=export_df,
             out_csv=Path(args.export_generation_csv).resolve(),
