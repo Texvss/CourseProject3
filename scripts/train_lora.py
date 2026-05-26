@@ -75,41 +75,35 @@ def clean_article_type(value: str) -> str:
 
 
 def template_target_description(row: pd.Series) -> str:
-    article = clean_article_type(row.get("articleType", "item"))
-    color = str(row.get("baseColour", "")).strip().lower()
-    gender = str(row.get("gender", "")).strip().lower()
-    gender_prefix = ""
-    if gender in {"men", "women", "boys", "girls", "unisex"}:
-        gender_prefix = f"{gender}'s " if not gender.endswith("s") else f"{gender} "
-    return normalize_spaces(
-        f"A {color} {gender_prefix}{article} with visible garment details and a clean catalog style."
-    )
+    name = normalize_spaces(row.get("productDisplayName", ""))
+    if not name:
+        return "A catalog-style garment with visible details."
+    return name
 
 
 def sanitize_target_description(text: str, row: pd.Series) -> str:
     cleaned = normalize_spaces(text)
     cleaned = re.sub(
-        r"\b(model|posing|wearing|standing|showing|pictured|photo|image|background)\b",
+        r"\b(model|posing|wearing|standing|showing|pictured|photo|image|background|"
+        r"men|mens|women|womens|boys|girls|unisex|brand|price|sale|discount|cheap|premium)\b",
         "",
         cleaned,
         flags=re.IGNORECASE,
     )
     cleaned = normalize_spaces(cleaned)
-    article = clean_article_type(row.get("articleType", "item"))
-    color = str(row.get("baseColour", "")).strip().lower()
-    if article and article.lower() not in cleaned.lower():
-        cleaned = f"{article.capitalize()} with visible garment details."
-    if color and color.lower() not in cleaned.lower():
-        cleaned = f"{color.capitalize()} {cleaned[0].lower() + cleaned[1:] if cleaned else article}."
+    cleaned = cleaned.strip(" -,:;")
+    if cleaned and not cleaned.lower().startswith(("a ", "an ")):
+        cleaned = f"A {cleaned[0].lower()}{cleaned[1:]}."
+    if cleaned and not cleaned.endswith((".", "!", "?")):
+        cleaned = f"{cleaned}."
     return normalize_spaces(cleaned)
 
 
 def make_training_prompt(row: pd.Series) -> str:
-    article = clean_article_type(row.get("articleType", "clothing item"))
-    color = str(row.get("baseColour", "")).strip().lower()
+    # Previous prompts included gold color/type labels, making copying enough.
+    # Keep the prompt style-only so the adapter learns catalog phrasing.
     return (
         "Write a short e-commerce garment description in one sentence. "
-        f"The item is a {color} {article}. "
         "Mention only visible clothing details. Do not mention people, poses, or background."
     )
 
