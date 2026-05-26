@@ -21,3 +21,4 @@ outputs/
 .idea/
 
 .DS_Store*.zip
+echo "data.zip" >> .gitignore
